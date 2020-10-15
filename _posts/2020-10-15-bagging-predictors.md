@@ -58,18 +58,13 @@ $$(y - \varphi_A (x))^2  = (y - E_L \varphi (x, L))^2 \leq E_L (y - \varphi (x,L
 
 위의 말은 뭐냐하면, 임의의 L을 가지고 만든 MSE보다 작다.
 
-$Var(\varphi_A(x))$만큼 크다. 
+$Var(\varphi(x,L))$만큼 크다. 
 
 왜 이렇게 될까?
 
-E_L (y - \varphi (x, L))^2  =
+$E_y,L (y - \varphi (x, L))^2  = Var(y|x) + E_L [E(y|x)-\varphi(x,L)]^2 = Bias^2 + Var_L (\varphi(x,L).$
 
-평균적으로 L 
-
-
-Var_L (\varphi (x,L)) 
-
-
+후자의 part가 없어진다. 즉, variance가 없어진다. 
 
 
 
