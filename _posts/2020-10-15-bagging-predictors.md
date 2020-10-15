@@ -5,12 +5,13 @@ tag: Bagging
 ---
 
 
-오늘은 **배깅(Bagging)**에 대해 이야기해볼까해. 이번 포스트는 Bagging predictors(Leo Breiman,1996)과 StackExchange를 참고해서 작성했어.
+오늘은 **배깅(Bagging)**에 대해 이야기해볼까해. 
+
+이번 포스트는 Bagging predictors(Leo Breiman,1996)과 StackExchange를 참고해서 작성했어.
 
 ## Single Learning set을 learning하는 보통 방법.
 
-우리 [decision tree](http://www.yes24.com/Product/Goods/78569687)를 생각해보자. Decision tree는 learner이고
-
+우리 [decision tree](http://www.yes24.com/Product/Goods/78569687)를 생각해보자. Decision tree는 learner이고i, 
 우리는 y를 잘 예측하는 것을 보통 목적으로 varphi를 만들어. 
 
 많은 learning 방법이 있지만 오늘은 decision tree를 예로 들어 설명할까해.
