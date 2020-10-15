@@ -41,23 +41,18 @@ overfitting. underfitting. good-fit.
 
 ## 배깅이란?
 
-한 가지 예제를 생각해볼까해. 만약 여러가지 
+한 가지 예제를 생각해볼까해. 우리에게 multiple learning set이 있다고 가정해보자.
+
+${L_k: k = 1,....,K}$. 각각에서 $\varphi_k (x) = \varphi (x,L_K)$를 만들 수 있겠지? 
+
+우리가 알 수 있는 것은 뭘까? 바로 $\varphi_A (x) = E_L (\varphi (x, L_k)$를 만들 수 있어. 즉, $L$에 의해 발생하는 $\varphi(x,L)$의 분산을 없앨 수 있는거지.
+
+우리는 다음을 구할 수 있어.
+
+$$ (y - \varphi_A (x))^2  = (y - E_L \varphi (x, L))^2 \leq E_L (y - \varphi (x,L))^2.$$
 
 
-
-
-
-
-데이터에 대해서 fitting을 한다. learning set에 fitting을 한다.
-
-근데 다음과 같은 문제가 있어서 overfit의 문제가 있고
-
-
-<--[한국어 임베딩](http://www.yes24.com/Product/Goods/78569687)-->
-
-다음 그림을 클릭하면 도서 안내 페이지로 이동합니다.
-
-<a href="http://www.yes24.com/Product/Goods/78569687"><img src="https://i.imgur.com/j03ENCc.jpg" width="500px" title="embeddings" /></a>
+<--<a href="http://www.yes24.com/Product/Goods/78569687"><img src="https://i.imgur.com/j03ENCc.jpg" width="500px" title="embeddings" /></a>-->
 
 
 
