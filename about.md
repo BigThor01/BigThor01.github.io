@@ -5,15 +5,17 @@ title: About
 
 <div style="font-size: 0.9rem; font-weight:300; line-height: 1.6rem;">
 
-안녕하세요. 반갑습니다. 이기창이라고 합니다. 제 관심 분야는 다음과 같습니다.
+안녕하세요,
 
-<p class="message" style="font-size: 0.9rem; font-weight: 700">
-Natural Language Processing, Linguistics, Machine Learning
-</p>
-궁금한 점이나 조언해주실 내용 있으시면 언제든지 연락주세요. 이메일, 깃허브, 페이스북, 링크드인 등 컨택포인트는 사이드바 중앙에 있습니다. 블로그 포스팅 하단에 질문할 수 있는 공간 또한 만들어뒀습니다. <br>
+평소 생각하는 것들, 혹은 정리 및 공유하면 좋겠다는 것들을 꾸준히 업데이트하려 합니다. 하나하나 의미 있는 컨텐츠가 되기를.
 
-다만 올해 초부터 회사를 다니고 있어서 업무 핑계로 제때 답하지 못하는 경우가 많아졌습니다. 늦게라도 최대한 답을 드리려고 노력하고 있습니다만, 이 점 배려해주시면 감사하겠습니다. <br>
+Data 분석에 관심이 많습니다. 어떻게 해야 data를 잘 이해하여 information을 얻을 수 있을까에 대해 고민합니다. <br>
+요즘은 알고리즘/자료구조에 대한 기본을 공부하고자 해요. Big data 분석 환경도 관심을 갖기 시작했어요.<br>
+블로그를 통해 생각을 공유할 예정입니다. 여러분이 생각하시는 더 좋은 생각들을 공유해주시면 감사하겠습니다 :)<br>
 
-제 CV는 <a href="http://ratsgo.github.io/public/CV.pdf">이곳</a>에서 확인할 수 있습니다. 
+\\<!--<p class="message" style="font-size: 0.9rem; font-weight: 700">-->
+\\<!--Natural Language Processing, Linguistics, Machine Learning-->
+\\<!--</p>-->
+\\<!--제 CV는 <a href="http://ratsgo.github.io/public/CV.pdf">이곳</a>에서 확인할 수 있습니다. -->
 
 </div>
