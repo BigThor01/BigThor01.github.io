@@ -42,6 +42,10 @@ overfitting. underfitting. good-fit.
 
 ## 배깅이란?
 
+
+
+## 배깅은 어떻게 작동할까?
+
 한 가지 예제를 생각해볼까해. 우리에게 multiple learning set이 있다고 가정해보자.
 
 ${L_k: k = 1,....,K}$. 각각에서 $\varphi_k (x) = \varphi (x,L_K)$를 만들 수 있겠지? 
@@ -50,10 +54,20 @@ ${L_k: k = 1,....,K}$. 각각에서 $\varphi_k (x) = \varphi (x,L_K)$를 만들 
 
 우리는 다음을 구할 수 있어.
 
-$$ (y - \varphi_A (x))^2  = (y - E_L \varphi (x, L))^2 \leq E_L (y - \varphi (x,L))^2.$$
+$$(y - \varphi_A (x))^2  = (y - E_L \varphi (x, L))^2 \leq E_L (y - \varphi (x,L))^2.$$
+
+위의 말은 뭐냐하면, 임의의 L을 가지고 만든 MSE보다 작다.
+
+$Var(\varphi_A(x))$만큼 크다. 
+
+왜 이렇게 될까?
+
+E_L (y - \varphi (x, L))^2  =
+
+평균적으로 L 
 
 
-<--<a href="http://www.yes24.com/Product/Goods/78569687"><img src="https://i.imgur.com/j03ENCc.jpg" width="500px" title="embeddings" /></a>-->
+Var_L (\varphi (x,L)) 
 
 
 
