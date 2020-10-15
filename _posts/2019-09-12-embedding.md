@@ -1,12 +1,59 @@
 ---
-title: 한국어 임베딩
-category: Natural Language Processing
-tag: embedding
+title: 배깅(Bagging)
+category: Machine Learning
+tag: Bagging, Machine Learning
 ---
 
-**임베딩(embedding)**은 자연어를 숫자의 나열인 벡터로 바꾼 결과 혹은 그 일련의 과정 전체를 가리키는 용어입니다. 단어나 문장 각각을 벡터로 변환해 벡터 공간에 '끼워 넣는다(embed)'는 취지에서 임베딩이라는 이름이 붙었습니다. 컴퓨터가 자연어를 처리할 수 있게 하려면 자연어를 계산 가능한 형식인 임베딩으로 바꿔줘야 합니다. 
 
-임베딩은 컴퓨터가 자연어를 이해하도록 하는 첫 관문으로 매우 중요한 기능을 합니다. 자연어 처리 모델의 성능은 임베딩이 좌우한다고 해도 과언이 아닌데요. 제가 이번에 많은 시간과 노력을 들여서 [한국어 임베딩](http://www.yes24.com/Product/Goods/78569687)이라는 책을 펴냈습니다. 이 책에서는 다양한 임베딩 기법을 일별하고 한국어 데이터 전처리, 임베딩 구축에 이르는 전 과정을 튜토리얼 방식으로 소개합니다. 
+오늘은 **배깅(Bagging)**에 대해 이야기해볼까해. 이번 포스트는 Bagging predictors(Leo Breiman,1996)과 StackExchange를 참고해서 작성했어.
+
+## Single Learning set을 learning하는 보통 방법.
+
+우리 [decision tree](http://www.yes24.com/Product/Goods/78569687)를 생각해보자. Decision tree는 learner이고
+
+우리는 y를 잘 예측하는 것을 보통 목적으로 varphi를 만들어. 
+
+많은 learning 방법이 있지만 오늘은 decision tree를 예로 들어 설명할까해.
+
+데이터에 fitting을 통해서 예측하게 된다.
+
+variance + bias로 구분돼 (regression 문제에서)
+
+variance-bias tradoff 라는 개념이 있어. 즉 어떤 방법이 bias가 커지는 만큼 variance는 작아짐 (데이터의 특성을 잘 반영하는데 오차까지 반영하냐..)
+
+그래서 우리는 good-fit을 찾기 위해서. validation을 사용해서 적절한 tree의 size를 구하게 돼.
+
+위와 같이 하나의 single learning set을 이용해 학습을 하는 경우, 해당 데이터 set에 전적으로 의존해서 learner를 만들기 때문에 Single learner.. 즉 overfit을 하지 않으면서 
+
+우리는 한 가지 궁금증을 갖게 돼. bias와 variance를 모두 작게 가져가는 방법은 없을까?
+
+Single learning set을 사용해서 fitting을 한다. 우리는 complexity를 높여서 training에 굉장히 잘맞는 모델을 만들 수 있다. 단 이러한 경우. variance가 증가.
+
+cross validation, 해당 방법으로 추정한 경우에 variance와 bias의 최적점을 찾는다. 음음.
+그래서 validation을 줘서, MSE를 줄이는 가장 best한 모델을 사용한다. 추정치가 됨.Just one case. L이 given된 경우. 약간의 bias가 있을 수 있음?
+bias.bias.bias. L의 variance에 의해서 발생하는 사실은 이것보다 
+
+근데 우리가 궁금한 것은 다음이다. bias와 variance를 모두 줄이는 방법은 없을까?
+
+overfitting. underfitting. good-fit.
+
+
+
+## 배깅이란?
+
+한 가지 예제를 생각해볼까해. 만약 여러가지 
+
+
+
+
+
+
+데이터에 대해서 fitting을 한다. learning set에 fitting을 한다.
+
+근데 다음과 같은 문제가 있어서 overfit의 문제가 있고
+
+
+<--[한국어 임베딩](http://www.yes24.com/Product/Goods/78569687)-->
 
 다음 그림을 클릭하면 도서 안내 페이지로 이동합니다.
 
