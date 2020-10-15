@@ -54,7 +54,7 @@ ${L_k: k = 1,....,K}$. 각각에서 $\varphi_k (x) = \varphi (x,L_K)$를 만들 
 
 우리는 다음을 구할 수 있어.
 
-$$(y - \varphi_A (x))^2  = (y - E_L \varphi (x, L))^2 \leq E_L (y - \varphi (x,L))^2.$$
+$(y - \varphi_A (x))^2  = (y - E_L \varphi (x, L))^2 \leq E_L (y - \varphi (x,L))^2.$
 
 위의 말은 뭐냐하면, 임의의 L을 가지고 만든 MSE보다 작다.
 
