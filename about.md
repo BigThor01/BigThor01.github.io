@@ -5,7 +5,7 @@ title: About
 
 <div style="font-size: 0.9rem; font-weight:300; line-height: 1.6rem;">
 
-안녕하세요,<br><br>
+안녕하세요.<br><br>
 
 평소 생각하는 것들, 혹은 정리 및 공유하면 좋겠다는 것들을 꾸준히 업데이트하려 합니다. 하나하나 의미 있는 컨텐츠가 되기를.<br><br>
 
