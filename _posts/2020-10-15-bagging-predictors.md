@@ -1,7 +1,7 @@
 ---
 title: 배깅(Bagging)
 category: Machine Learning
-tag: Bagging, Machine Learning
+tag: Bagging
 ---
 
 
