@@ -13,7 +13,9 @@ tag: Bagging
 
 Machine learning은 learning data를 이용해서 rule을 만드는 방법이야.
 
-우리가 $L = \{(\mathbf{x}_n, y_n); n =1, ..., N\}$라는 leanring set을 가지고 있다고 하자.
+우리가 $L = {(\mathbf{x}_n, y_n); n =1, ..., N}$라는 leanring set을 가지고 있고, $\varphi$ 방법을 이용해서 예측 모형을 만든다고 생각해보자.
+
+
 
 
 
