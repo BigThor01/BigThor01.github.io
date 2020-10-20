@@ -40,7 +40,7 @@ binary classification case를 생각해보면, prediction error는 오분류율�
 
 $ Error = E_{y,L} 1(y \neq \varphi (x,L)) = P_y,L (y \neq \varphi (x,L))=  P (y = 1) P(\varphi(x,L) = 0 ) + P(y =0) P(\varphi (x,L) =1 )$
 
-$  = (1-2p) P(\varphi(x,L) = 1 ) + p$, where $p = P(y=1)$
+$  = (1-2p) P(\varphi(x,L) = 1 ) + p$,  where $p = P(y=1)$
 
 
 $\varphi$가 order-correct($argmax_j P(Y = j) = argmax_j P(\varphi(x,L) = j$) 하다고 가정해보자. 보통 $\varphi$는 order-correct의 속성을 갖도록 만들어지므로 이렇게 가정하는거는 문제가 없어.
