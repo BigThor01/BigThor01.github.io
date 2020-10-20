@@ -43,7 +43,7 @@ $ Error = E_{y,L} 1(y \neq \varphi (x,L)) = P_y,L (y \neq \varphi (x,L))=  P (y 
 $  = (1-2p) P(\varphi(x,L) = 1 ) + p$, 여기서 $p$는 $p = P(y=1)$
 
 
-$\varphi$가 order-correct($argmax_j P(Y = j) = argmax_j P(\varphi(x,L) = j$) 하다고 가정해보자. 보통 $\varphi$는 order-correct의 속성을 갖도록 만들어지므로 이렇게 가정하는거는 문제가 없어.
+$\varphi$가 order-correct ($argmax_j P(Y = j) = argmax_j P(\varphi(x,L) = j$) 하다고 가정해보자. 보통 $\varphi$는 order-correct의 속성을 갖도록 만들어지므로 이렇게 가정하는거는 문제가 없어.
 
 위의 식을 그래프로 표현하여 살펴보면 $\varphi$의 variance가 클수록 prediction error는 커지게 돼. 
 
