@@ -35,10 +35,18 @@ $ = something + Var_L (\varphi(x,L))$
 
 ### classification case
 
+binary classification case를 생각해보면, prediction error는 오분류율을 가지고 측정하게 돼. 역시 다음의 식을 구할 수 있어.
+
+$ Error = E_{y,L} 1(y \neq \varphi (x,L)) = P_y,L (y \neq \varphi (x,L)$
+
+$ =  P (y = 1) P(\varphi(x,L) = 0 ) + P(y =0) P(\varphi (x,L) =1 ) = (1-2p) P(\varphi(x,L) = 1 ) + p$, where $p = P(y=1)$
 
 
 
-[어떤 $\varphi$가 unstable할까?]{https://stat.snu.ac.kr/ydkim/courses/2017-1/addm/Chap7.1-Bagging.pdf}
+
+
+
+[어떤 $\varphi$가 unstable할까?](https://stat.snu.ac.kr/ydkim/courses/2017-1/addm/Chap7.1-Bagging.pdf)
 
 
 
