@@ -9,11 +9,13 @@ tag: Bagging
 
 이번 포스트는 Bagging predictors(Leo Breiman,1996), 서울대 김용대 교수님의 강의자료 및 StackExchange를 참고해서 작성했어.
 
-## Predictor가 unstable한 경우, prediction이 부정확할 가능성이 높아.
+## Predictor가 unstable한 경우, prediction은 부정확해
 
 Machine learning은 learning data를 이용해서 rule을 만드는 방법이야.
 
-우리가 $L = {(\mathbf{x}_n, y_n); n =1, ..., N}$라는 leanring set을 가지고 있고, $\varphi$ 방법을 이용해서 예측 모형을 만든다고 생각해보자.
+우리가 $L = \\{(\mathbf{x}_n, y_n); n =1, ..., N\\}$라는 leanring set을 가지고 있고, $\varphi$ 방법을 이용해서 예측 모형을 만든다고 생각해보자. 
+
+만들어진 predictor는 $\varphi(x, L)$로 표기할 수 있지. predictor는 $L$에 의해 결정되기 때문에 $L$이 인자로 있어.
 
 
 
