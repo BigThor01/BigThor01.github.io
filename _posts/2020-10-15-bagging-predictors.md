@@ -7,9 +7,15 @@ tag: Bagging
 
 오늘은 **배깅(Bagging)**에 대해 이야기해볼까해. 
 
-이번 포스트는 Bagging predictors(Leo Breiman,1996)과 StackExchange를 참고해서 작성했어.
+이번 포스트는 Bagging predictors(Leo Breiman,1996), 서울대 김용대 교수님의 강의자료 및 StackExchange를 참고해서 작성했어.
 
-## Single Learning set을 learning하는 보통 방법.
+## Predictor가 unstable한 경우, prediction이 부정확할 가능성이 높아.
+
+Machine learning은 learning data를 이용해서 rule을 만드는 방법이야.
+
+우리가 $L = \{(\mathbf{x}_n, y_n); n =1, ..., N\}$라는 leanring set을 가지고 있다고 하자.
+
+
 
 우리 [decision tree](http://www.yes24.com/Product/Goods/78569687)를 생각해보자. Decision tree는 learner이고i, 
 우리는 y를 잘 예측하는 것을 보통 목적으로 varphi를 만들어. 
