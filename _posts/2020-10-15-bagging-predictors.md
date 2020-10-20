@@ -23,12 +23,13 @@ Machine learning은 learning data를 이용해서 rule을 만드는 방법이야
 
 ### regression case
 
-regression case에서 prediction error는 보통 MSE를 통해 측정하게 돼. MSE를 풀어서 쓰면 우리는 다음의 식을 구할 수 있어.
+regression case에서 prediction error는 보통 MSE를 통해 측정하게 돼.  MSE를 풀어서 쓰면 우리는 다음의 식을 구할 수 있어.
 
-$E_L (y - \varphi(x,L))^2 = y^2 - 2y E_L \varphi(x,L) + E_L \varphi^2 (x,L)\\
- \leq  y^2 - 2y E_L \varphi(x,L) + E_L \varphi (x,L)^2\\
- = (y - E_L \varphi(x,L))^2$
- 
+$E_L (y - \varphi(x,L))^2 = y^2 - 2y E_L \varphi(x,L) + E_L \varphi^2 (x,L)$
+$\geq  y^2 - 2y E_L \varphi(x,L) + E_L \varphi (x,L)^2  = (y - E_L \varphi(x,L))^2$
+
+
+
  
 
 
