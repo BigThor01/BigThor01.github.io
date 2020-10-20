@@ -15,7 +15,10 @@ Machine learning은 learning data를 이용해서 rule을 만드는 방법이야
 
 우리가 $L = \\{(\mathbf{x}_n, y_n); n =1, ..., N\\}$라는 leanring set을 가지고 있고, $\varphi$ 방법을 이용해서 예측 모형을 만든다고 생각해보자. 
 
-만들어진 predictor는 $\varphi(x, L)$로 표기할 수 있지. predictor는 $L$에 의해 결정되기 때문에 $L$이 인자로 있어.
+만들어진 predictor는 $\varphi(x, L)$로 표기할 수 있지. 여기서 predictor는 $L$에 의해 결정되기 때문에 $L$이 인자로 들어있어.
+
+만약 predictor $\varphi(x, L)$가 unstable하다고 가정해볼까? 즉, $L$이 변화함에 따라 predictor의 변동이 크다고 생각해보자.그럼 prediction을 할 때 어떤 문제가 생길까?
+
 
 
 
