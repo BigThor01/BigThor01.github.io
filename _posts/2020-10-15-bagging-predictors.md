@@ -17,11 +17,29 @@ Machine learning은 learning data를 이용해서 rule을 만드는 방법이야
 
 만들어진 predictor는 $\varphi(x, L)$로 표기할 수 있지. 여기서 predictor는 $L$에 의해 결정되기 때문에 $L$이 인자로 들어있어.
 
-만약 predictor $\varphi(x, L)$가 unstable하다고 가정해볼까? 즉, $L$이 변화함에 따라 predictor의 변동이 크다고 생각해보자.그럼 prediction을 할 때 어떤 문제가 생길까?
+만약 predictor $\varphi(x, L)$가 unstable하다고 가정해볼까? 즉, $L$의 변화에 따른 predictor의 변동이 크다고 생각해보자.
+
+그럼 prediction을 할 때 어떤 문제가 생길까? 
+
+### regression case
+
+regression case에서 prediction error는 보통 MSE를 통해 측정하게 돼. MSE를 풀어서 쓰면 우리는 다음의 식을 구할 수 있어.
+
+$E_L (y - \varphi(x,L))^2 = y^2 - 2y E_L \varphi(x,L) + E_L \varphi^2 (x,L)\\
+ \leq  y^2 - 2y E_L \varphi(x,L) + E_L \varphi (x,L)^2\\
+ = (y - E_L \varphi(x,L))^2$
+ 
+ 
 
 
 
+### classification case
 
+[어떤 $\varphi$가 unstable할까?]{https://stat.snu.ac.kr/ydkim/courses/2017-1/addm/Chap7.1-Bagging.pdf}
+
+
+
+## 
 
 
 우리 [decision tree](http://www.yes24.com/Product/Goods/78569687)를 생각해보자. Decision tree는 learner이고i, 
