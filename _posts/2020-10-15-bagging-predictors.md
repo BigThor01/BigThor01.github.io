@@ -25,7 +25,7 @@ Machine learning은 learning data를 이용해서 rule을 만드는 방법이야
 
 regression case에서 prediction error는 보통 MSE를 통해 측정하게 돼.  MSE를 풀어서 쓰면 우리는 다음의 식을 구할 수 있어.
 
-$ MSE = E_{y,L} (y - \varphi (x,L))^2 = E_{y,L} (y - E(y|x) + E(y|x) - \varphi (x,L))^2$
+$ MSE = E_{y,L} (y - \varphi (x,L))^2 = E_{y,L} (y - E(y\|x) + E(y\|x) - \varphi (x,L))^2$
 
 $ = Var (y|x) + (E(y|x) - E_L (\varphi(x,L))^2 + Var_L (\varphi (x,L))$
 
