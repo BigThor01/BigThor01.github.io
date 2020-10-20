@@ -27,13 +27,16 @@ regression case에서 prediction error는 보통 MSE를 통해 측정하게 돼.
 
 $ MSE = E_{y,L} (y - \varphi (x,L))^2 = E_{y,L} (y - E(y\|x) + E(y\|x) - \varphi (x,L))^2$
 
-$ = Var (y|x) + (E(y|x) - E_L (\varphi(x,L))^2 + Var_L (\varphi (x,L))$
+$ = Var (y\|x) + (E(y\|x) - E_L (\varphi(x,L))^2 + Var_L (\varphi (x,L))$
 
 $ = something + Var_L (\varphi(x,L))$
 
 위의 식에서 알 수 있듯이 MSE는 $\varphi$의 variance에 의해 표현되고, $\varphi$가 unstable할수록 prediction error는 커지게 돼.
 
 ### classification case
+
+
+
 
 [어떤 $\varphi$가 unstable할까?]{https://stat.snu.ac.kr/ydkim/courses/2017-1/addm/Chap7.1-Bagging.pdf}
 
