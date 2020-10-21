@@ -51,6 +51,8 @@ $\varphi$가 order-correct ($argmax_j P(Y = j) = argmax_j P(\varphi(x,L) = j)$) 
 
 위의 식을 오분류율과 $P(\varphi(x,L)=1)$의 그래프로 표현하여 살펴보면 
 
+<a href="https://imgur.com/gallery/YhOpWuk"><img src="https://imgur.com/gallery/YhOpWuk.png" width="300px" title="source: imgur.com" /></a>
+
 ![error_rate](https://imgur.com/gallery/YhOpWuk)
 
 $\varphi$의 variance가 클수록 prediction error는 커지게 돼. 
