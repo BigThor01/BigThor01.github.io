@@ -1,8 +1,8 @@
 # Site Info
-title: ratsgo's blog
-tagline: 'for textmining'
-description: 'blog for textmining'
-url: http://ratsgo.github.io
+title: BigThor's blog
+tagline: ''
+description: 'blog for machine learning'
+url: http://BigThor01.github.io
 logo: '/public/logo.png'
 encoding: utf-8
 
@@ -23,16 +23,16 @@ version: 1.0.0
 
 # About/contact
 author:
-  name: ratsgo
+  name: BigThor
   description: <strong>보물찾기</strong> 그리운 마을, 그 먼 바다에 이르기까지
   gravatar: 0a638fc7996869b1b67fb90ccf77dcfe # md5 hash of your email address
   contact:
-    linkedin:  https://www.linkedin.com/in/gichanglee/
-    github:    https://github.com/ratsgo
-    facebook:  https://www.facebook.com/gichanglee.84
+    #linkedin:  https://www.linkedin.com/in/heonjunpark/
+    github:    https://github.com/BigThor01
+    #facebook:  https://www.facebook.com/gichanglee.84
     #twitter:  <hide>
     #weibo:    <hide>
-    email:     mailto:gichang_lee@korea.ac.kr
+    email:     mailto:qkrgjswns300@gmail.com
 
 # Navigation (2nd level links supported)
 nav:
