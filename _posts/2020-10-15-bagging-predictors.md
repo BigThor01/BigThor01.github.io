@@ -56,6 +56,15 @@ $\varphi$가 order-correct ($argmax_j P(Y = j) = argmax_j P(\varphi(x,L) = j)$) 
 $\varphi$의 variance가 클수록 prediction error는 커지게 돼. 
 
 
+## 배깅은 predictor를 stable하게 만드는 방법 (단, $\varphi$가 unstable한 경우)
+
+일단 배깅이 어떤 방법인지 소개하고, 어떻게 unstable한 $\varphi$를 stable하게 만드는지 알아보자.
+
+우리한테 unstable한 $\varphi$가 주어졌다고 하자. 
+
+만약 
+
+
 
 [어떤 $\varphi$가 unstable할까?](https://stat.snu.ac.kr/ydkim/courses/2017-1/addm/Chap7.1-Bagging.pdf)
 
