@@ -16,10 +16,10 @@ tag: Huffman code
 
 예를들어 A, B, C, D 네 개의 문자는 다음과 같이 2 bit의 이진코드로 표현이 가능해.
 
- - A $rightarrow$ 00
- - B $rightarrow$ 01
- - C $rightarrow$ 10
- - D $rightarrow$ 11
+ - A $\rightarrow$ 00
+ - B $\rightarrow$ 01
+ - C $\rightarrow$ 10
+ - D $\rightarrow$ 11
 
 우리가 알고 있는 아스키(ASCII) 코드는 128개 기호를 8 bit의 이진수로 표현한 대표적인 이진코드 중 하나야.
 
