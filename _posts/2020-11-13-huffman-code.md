@@ -83,3 +83,14 @@ $2^{bit\ 수} = k\ \rightarrow\ {bit\ 수} = \log_2 k.$
 
 <a href="https://i.imgur.com/mCd1XJG"><img src="https://i.imgur.com/mCd1XJG.png" width="400px" title="source: imgur.com" /></a>
 
+이렇게 만들면 각 문자는 다음과 같이 부호화 돼.
+
+ - A : 0
+ - B : 110
+ - C : 100
+ - D : 111
+ - E : 101
+
+
+위와 같이 만들게 되면 **더 낮은 빈도수를 가진 문자 순으로 bit가 추가**되는 점과 **어떤 문자의 부호가 다른 문자의 접두어가 되지 않는** 두 가지 성질을 만족하게 돼.
+
