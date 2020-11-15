@@ -81,7 +81,7 @@ $2^{bit\ 수} = k\ \rightarrow\ {bit\ 수} = \log_2 k.$
   4. 트리가 완성되면, 상위 노드에서 왼쪽은 0, 오른쪽은 1을 부여한다.
   
 
-<a href="https://i.imgur.com/mCd1XJG"><img src="https://i.imgur.com/mCd1XJG.png" width="400px" title="source: imgur.com" /></a>
+<a href="https://i.imgur.com/d7f6KUl"><img src="https://i.imgur.com/d7f6KUl.jpg" width="400px" title="source: imgur.com" /></a>
 
 이렇게 만들면 각 문자는 다음과 같이 부호화 돼.
 
