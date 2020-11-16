@@ -1,5 +1,5 @@
 ---
-title: netstat를 활용한 접속 IP 로그 기록 배치 파일 만들기
+title: 접속 IP 기록을 위한 배치파일 만들기(netstat)
 category: etc.
 tag: ["netstat", "Batch file"]
 ---
