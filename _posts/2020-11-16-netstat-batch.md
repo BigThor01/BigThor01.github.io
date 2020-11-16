@@ -20,6 +20,8 @@ tag: ["netstat", "Batch file"]
   
 그럼 위에서 말한 배치 파일과 그 안에 들어가는 netstat, timeout, goto 명령어를 알아보고, 실제 만들어진 배치 파일을 살펴보자.
 
+---
+
 ## 배치(batch) 파일 구성
 
 **배치 파일**은 **명령 프롬프트(cmd)에서 실행하는 명령어를 파일로 만들어서 실행하는 파일**이야. 
@@ -43,7 +45,7 @@ C:/Users/82107> netstat -an
 
 위의 명령어를 cmd에서 실행하게 되면 모든 네트워크(수신 대기 + 연결) 정보를 결과로 보여줘. 
 
-<a href="https://i.imgur.com/yIeGHgj"><img src="https://i.imgur.com/yIeGHgj.png" width="400px" title="source: imgur.com" /></a>
+<a href="https://i.imgur.com/yIeGHgj"><img src="https://i.imgur.com/yIeGHgj.png" width="800px" title="source: imgur.com" /></a>
 
 결과는 4개 항목으로 구성되어 있어.
 
@@ -66,19 +68,6 @@ C:/Users/82107> netstat -an | find "5601"
 ```
 
 
-```powershell
-:: log.bat 파일
-@echo off
-  :1
-    echo ----------------- %time% ----------------- >> C:/user_log/log_%date%.txt
-    
-    netstat -an | find "192.168.35.100:5601" >> C:/user_log/log_%date%.txt
-    
-    timeout 120 /nobreak > NUL
-    
-    goto 1
-```
-
 ### timeout (cmd 명령어)
 
 
@@ -86,5 +75,23 @@ C:/Users/82107> netstat -an | find "5601"
 
 
 
-## 로그 기록을 위한 배치 파일
+---
+
+## 예제 : 로그 기록을 위한 배치 파일 
+
+```powershell
+:: log.bat 파일
+@echo off
+  :1
+    echo ----------------- %time% ----------------- >> C:/user_log/log_%date%.txt
+    
+    netstat -an | find "192.168.35.239:5601" >> C:/user_log/log_%date%.txt
+    
+    timeout 120 /nobreak > NUL
+    
+    goto 1
+```
+
+
+
 
