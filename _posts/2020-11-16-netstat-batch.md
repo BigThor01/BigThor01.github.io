@@ -15,7 +15,7 @@ tag: ["netstat", "Batch file"]
  - **배치(batch) 파일의 구성**
  
    1. **netstat 명령어**를 이용해서 현재 접속한 ip 확인
-   2. netstat의 결과를 ">>" 명령어로 **로그를 저장할 파일에 출력**
+   2. netstat의 결과를 "**>>**" 명령어로 **로그를 저장할 파일에 출력**
    3. **timeout / goto 명령어**를 이용해 120초 간격으로 1 & 2를 실행
   
 그럼 위에서 말한 배치 파일과 그 안에 들어가는 netstat, timeout, goto 명령어를 알아보고, 실제 만들어진 배치 파일을 살펴보자.
@@ -40,6 +40,13 @@ netstat 명령어 뒤에는 여러 옵션을 사용할 수 있지만, 오늘은 
 ```powershell
 C:/Users/82107> netstat -an
 ```
+
+위의 명령어를 cmd에서 실행하게 되면 모든 네트워크(수신 대기 + 연결) 정보를 결과로 보여줘.
+
+
+
+<a href="https://i.imgur.com/d7f6KUl"><img src="https://i.imgur.com/d7f6KUl.jpg" width="400px" title="source: imgur.com" /></a>
+
 
 
 
