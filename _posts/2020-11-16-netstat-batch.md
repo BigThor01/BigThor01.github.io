@@ -36,18 +36,34 @@ netstat 명령어 뒤에는 여러 옵션을 사용할 수 있지만, 오늘은 
 
  - -a : 모든 연결 및 수신대기 포트를 표시하는 옵션
  - -n : 주소나 포트형식을 숫자로 표시하는 옵션
- 
+
 ```powershell
 C:/Users/82107> netstat -an
 ```
 
-위의 명령어를 cmd에서 실행하게 되면 모든 네트워크(수신 대기 + 연결) 정보를 결과로 보여줘.
+위의 명령어를 cmd에서 실행하게 되면 모든 네트워크(수신 대기 + 연결) 정보를 결과로 보여줘. 
+
+<a href="https://i.imgur.com/yIeGHgj"><img src="https://i.imgur.com/yIeGHgj.png" width="400px" title="source: imgur.com" /></a>
+
+결과는 4개 항목으로 구성되어 있어.
+
+  - 프로토콜 : 사용 프로토콜
+  - 로컬주소 : 열려있는 내 PC의 ip/포트번호
+  - 외부주소 : 내 PC에 접속한 ip/포트번호
+  - 상태 : 연결상태
+    + LISTENING : 현재 서비스를 대기 중
+    + ESTABLISHED : 연결된 상태
+    + TIME_WAIT : 연결이 종료되었으나 당분간 포트는 열어놓은 상태
+    + CLOSED : 완전히 연결이 종료된 상태
+
+netstat 명령어를 사용하면 모든 네트워크 정보가 나타나는데, 이 중 내가 제공하는 서비스의 특정 포트로의 접속 정보만 확인하기 위해서는 **find** 명령어를 사용하면 돼.
+
+예를들어 내 서비스의 포트가 5601 일 때, 해당 포트로의 접속 정보만 확인하는 명령어는 다음과 같아.
 
 
-
-<a href="https://i.imgur.com/d7f6KUl"><img src="https://i.imgur.com/d7f6KUl.jpg" width="400px" title="source: imgur.com" /></a>
-
-
+```powershell
+C:/Users/82107> netstat -an | find "5601"
+```
 
 
 ```powershell
