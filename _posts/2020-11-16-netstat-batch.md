@@ -149,5 +149,5 @@ goto 1
 
 만들어진 log.bat 파일을 실행하면 "C:/user_log/log_%date%.txt" 파일이 생성되고 다음의 내용처럼 로그가 저장되지.
 
-<a href="https://i.imgur.com/yIeGHgj"><img src="https://i.imgur.com/yIeGHgj.png" width="800px" title="source: imgur.com" /></a>
+<a href="https://i.imgur.com/iF9si4G"><img src="https://i.imgur.com/iF9si4G.png" width="800px" title="source: imgur.com" /></a>
 
