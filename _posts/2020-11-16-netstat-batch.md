@@ -142,4 +142,7 @@ goto 1
    + 어떤 키를 눌러도 120초 간격이 유지되도록 **/nobreak** 명령어를 써주었어.
    + timeout 명령어가 실행되면 cmd 창에 "x 초 기다리는 중" 이라는 문자열이 나오게 돼. cmd 창에 아무것도 출력되지 않도록 **> NUL** 을 추가했어.
 
+만들어진 log.bat 파일을 실행하면 "C:/user_log/log_%date%.txt" 파일이 생성되고 다음의 내용처럼 로그가 저장되지.
+
+<a href="https://i.imgur.com/yIeGHgj"><img src="https://i.imgur.com/yIeGHgj.png" width="800px" title="source: imgur.com" /></a>
 
