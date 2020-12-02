@@ -14,22 +14,6 @@ tag: ["Computer vision", "Convolution", "Edge dectection"]
 
 **Computer vision**은 **사람이나 동물의 시각 체계 기능을 컴퓨터에서 구현하는 기술**을 의미해.
 
----
-title: "[CNN by Andrew Ng-01] Computer vision & Convolution"
-category: Convolutional Neural Networks
-tag: ["Computer vision", "Convolution", "Edge dectection"]
----
-
-\[CNN by Andrew Ng\] 포스트는 Andrew Ng 선생님의 CNN(Convolutional Neural Networks) 유투브 강의를 듣고 정리한 내용을 올릴 예정이야.
-
- - 강의 링크 : [Convolutional Neural Networks by Andrew Ng](https://www.youtube.com/watch?v=ArPaAX_PhIs&list=PLkDaE6sCZn6Gl29AoE31iwdVwSG-KnDzF)
-
----
-
-## What is Computer Vision?
-
-**Computer vision**은 **사람이나 동물의 시각 체계의 기능을 컴퓨터에서 구현하는 기술**을 의미해.
-
 사람은 눈을 통해 보이는 사물을 구분하거나 전방의 사물을 인지할 수 있는 시각/인식 체계를 가지고 있어.
 
 <a href="https://i.imgur.com/rHoB6Th"><img src="https://i.imgur.com/rHoB6Th.png" width="700px" title="source: imgur.com" /></a>
@@ -80,4 +64,10 @@ Q. 위의 이미지에서 세로 윤곽선이 어디에 있는지 알려면 어�
 
 임의의 $6 \times 6$ 픽셀의 grayscale 이미지가 있다고 하자. 해당 이미지는 픽셀의 음영에 따라 값을 갖는 $6\times 6$ 행렬로 표현이 가능해.
 
-
+$$
+    \begin{matrix}
+    1 & x & x^2 \\
+    1 & y & y^2 \\
+    1 & z & z^2 \\
+    \end{matrix}
+$$
