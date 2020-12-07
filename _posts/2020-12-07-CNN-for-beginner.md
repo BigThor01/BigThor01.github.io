@@ -51,12 +51,16 @@ Computer vision 분야를 발전시킨 가장 혁신적인 방법 중 하나인 
 
 입력된 input 이미지가 어떤 class에 속하는지 분류하는 작업을 **image classification** 이라 불러.
 
-사람은 이런 작업을 큰 노력 없이 
+사람은 이런 작업을 큰 노력 없이 다양한 변형에서도 빠르고 정확하게 할 수 있어. (정말 놀라운 일이야!)
+
+Hubel and Wiesel(1962)는 사람이 이미지를 인식할 때, 일부 뉴런 세포가 특정한 방향의 윤곽선에서만 반응한다는 사실을 알아냈지.
+
+
 **Computer vision**은 **사람이나 동물의 시각 체계 기능을 컴퓨터에서 구현하는 기술** 을 의미해.
 
 사람은 눈을 통해 보이는 사물을 구분하거나 전방의 사물을 인지할 수 있는 시각/인식 체계를 가지고 있어.
 
-<a href="https://i.imgur.com/rHoB6Th"><img src="https://i.imgur.com/rHoB6Th.png" width="700px" title="source: imgur.com" /></a>
+<a href="https://i.imgur.com/rHoB6Th"><img src="https://i.imgur.com/rHoB6Th.png" width="700px" title="source: imgur.com"  caption="고양이"/></a>
 
 예를들어, 위의 사진이 주어지면 우리는 시각적으로 이미지를 확인하고 특성을 파악해서 "저건 고양이다."라고 판단할 수 있어.
 
