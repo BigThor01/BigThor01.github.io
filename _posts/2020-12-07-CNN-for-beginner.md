@@ -29,7 +29,7 @@ Computer vision 은 사람이나 동물의 시각 체계 기능을 컴퓨터에�
 
 사람은 눈을 통해 보이는 사물을 구분하거나 전방의 사물을 인지하는 시각/인식 체계를 가지고 있어.
 
-<a href="https://i.imgur.com/hSAZCZH"><img src="https://i.imgur.com/hSAZCZH.jpg" width="700px" title="source: imgur.com" /><figcaption>This is my caption text.</figcaption></a>
+<a href="https://i.imgur.com/hSAZCZH"><img src="https://i.imgur.com/hSAZCZH.jpg" width="700px" title="source: imgur.com"  caption="고양이"/></a>
 
 예를들어, 위의 사진이 주어지면 사람은 얼굴 모양, 눈, 귀, 코, 발 등의 특성을 파악하고 "고양이"라고 판단할 수 있어.
 
