@@ -1,0 +1,28 @@
+---
+title: "딥러닝 기초 - 역전파 알고리즘(1)"
+category: Deep learning
+tag: ["Bagpropagation"]
+---
+
+딥러닝에서 네트워크를 학습하는 핵심 알고리즘인 **역전파(backpropagation)**에 대해 알아보자.
+
+"역전파 알고리즘(1)" 포스팅에서는 기존에 알고있는 내용을 간략히 정리하고, 역전파 알고리즘에 대해 공식을 배제한 직관적으로 이해를 해보자.
+
+오늘 정리하는 내용은 다음의 영상을 참고해서 작성했어.
+
+ - [3Blue1Brown youtube](https://youtu.be/Ilg3gGewQ5U)
+
+---
+## Recap
+
+숫자를 손으로 쓴 MNIST 예제를 통해 신경망에 대해 간략히 정리해보자. MNIST 데이터셋에서 학습 예제는 $28\times 28$ 손으로 쓴 숫자 이미지와 정답 레이블로 구성되어있어.
+
+<a href="https://i.imgur.com/LztChQB"><img src="https://i.imgur.com/LztChQB.png" width="700px" title="source: imgur.com" /></a>
+_@3Blue1Brown_
+
+숫자 이미지를 분류하기 위한 네트워크는 $28 \times 28 = 784$ 뉴런의 **입력 layer**, 10개 클래스 뉴런의 **출력 layer**, 그리고 중간을 연결하는 **hidden layer**로 구성되며,
+각 층간에는 **가중치(weight)**와 **편향(bias)**으로 연결되어있어. 
+
+이 네트워크는 여러 예제를 학습하면서, 네트워크가 숫자 이미지를 더 잘 분류하는 방향으로 가중치와 편향을 조정하게 돼.
+
+
