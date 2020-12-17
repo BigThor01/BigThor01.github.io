@@ -29,3 +29,31 @@ Cost 에 대한 가중치의 gradient 는 가중치 변동이 cost 를 얼마나
 ---
 ## 간단한 네트워크의 gradient 계산
 
+두 개의 hidden layer 를 갖고 각 층에 1개의 뉴런만을 갖는 네트워크에 하나의 학습 예제를 흘려보냈다고 하자.
+
+이런 상황에서 cost 가 가중치 변화에 어떤 영향을 받는지, 즉 가중치에 대한 미분을 구해보자.
+
+일단 마지막 2개 층부터 살펴볼까? 출력층을 $L$, 그 이전 층을 $L-1$ 이라고 해보자. 또한 이전 층에서 전달받은 값은 $z$, $z$ 를 활성화한 활성화값은 $a$, 가중치와 편향은 각각 $w$, $b$ 라고 쓸께.
+
+<a href="https://i.imgur.com/kLab4qY"><img src="https://i.imgur.com/kLab4qY.png" width="700px" title="source: imgur.com" /></a>_@3Blue1Brown_
+
+출력층을 $L$ 이라고 표기했으므로, $z^{(L)}$ 은 $L-1$ 층에서 전달받은 값, $a^{(L)}$ 은 $z^{(L)}$ 을 활성화한 값이 돼. 
+
+그럼 학습 예제에 대한 cost 함수와  $z^{(L)}$, $a^{(L)}$ 은 다음과 같이 표현할 수 있어.
+ 
+ - $z^{(L)} = w^{(L)} a^{(L-1)} + b^{(L)}$
+ - $a^{(L)} = \sigma (z^{(L)})$, $\sigma (.)$ 는 활성화함수
+ - $C_0 = (a^{(L)} - y)^2$
+ 
+위의 관계를 가지고 우리는 $C_0$ 를 가중치 $w^{(L)}$ 로 미분한 $\frac{\delta C_0}{\delta w^{(L)}}$ 을 연쇄법칙을 통해 구할 수 있어.
+
+$\frac{\delta C_0}{\delta w^{(L)} = \frac{\delta z^{(L)}}{\delta w^{(L)}} \frac{\delta a^{(L)}}{\delta z^{(L)}} \frac{\delta C_0}{\delta a^{(L)}}$
+
+$\rightarrow \frac{\delta C_0}{\delta w^{(L)} = a^{(L-1)}}\ \delta ' (z^{(L)}})\ 2 ( a^{(L)}} - y)$
+
+식을 보면 가중치의 영향은 가중치가 연결된 이전 층 뉴런의 활성화 정도($a^{(L-1)}}$), 출력값과 실제값의 차이($ a^{(L)}} - y$) 에 비례한다는 사실을 알 수 있어.
+
+사실 위의 식은 하나의 예제에 대해서만 미분값을 구해본 거고, 모든 예제에 대해서 구해보면 다음과 같이 쉽게 구할 수 있어 (그건 cost 함수는 각 예제의 cost 를 평균해서 구하기 때문이지)
+
+$\frac{\delta C}{\delta w^{(L)} = \sum_{i=0}^{n-1} \frac{\delta z_i^{(L)}}{\delta w^{(L)}} \frac{\delta a_i^{(L)}}{\delta z_i^{(L)}} \frac{\delta C}{\delta a_i^{(L)}}$
+
