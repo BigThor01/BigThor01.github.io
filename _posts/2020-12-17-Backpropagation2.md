@@ -76,6 +76,26 @@ $a^{(L-1)}}\ \delta ' (z^{(L)}})$, $a^{(L-2)}}\ \delta ' (z^{(L-1)}})$ 은 네�
 위를 보면 활성화에 대한 미분값은 그 전에 연산된 활성화의 미분값을 가지고 다음과 같이 재귀적 계산으로 구할 수 있어.
 
  - $ \frac{\delta C_0}{\delta a^{(L)}} = 2 (a^{(L)}- y)$
- - $ \frac{\delta C_0}{\delta a^{(k)}} = \frac{\delta z^{(k+1)}}{\delta a^{(k)}} \frac{\delta a^{(k+1)}}{\delta z^{(k+1)}} \frac{\delta C_0}{\delta a^{(k+1)}}$, $k=0, ... , L-1$.
+ - $ \frac{\delta C_0}{\delta a^{(L')}} = \frac{\delta z^{(L'+1)}}{\delta a^{(L')}} \frac{\delta a^{(L'+1)}}{\delta z^{(L'+1)}} \frac{\delta C_0}{\delta a^{(L'+1)}}$, $L'=0, ... , L-1$.
  
  
+이렇게 뒤에서부터 활성화에 대한 미분값을 순차적으로 구할 수 있고, 이 것을 가지고 다시 가중치에 대한 gradient 를 구할 수 있는거야. 이렇게 구해가는 알고리즘이 바로 역전파 알고리즘이야.
+
+## 조금 더 복잡한 형태 (한 층에 2개 이상의 뉴런)
+
+위에서 설명한 것은 너무 간단한 예제가 아닌가 싶기도 할꺼야. 실제로 층의 뉴런이 늘어나게되면 미분계산이 더 어렵지 않냐는 질문도 할 수 있어.
+
+하지만 사실 뉴런이 늘어난다고 해도 실제로 구하는 작업은 동일해. 한 번 봐볼까?
+
+<a href="https://i.imgur.com/mskdA4y"><img src="https://i.imgur.com/mskdA4y.png" width="700px" title="source: imgur.com" /></a>_@3Blue1Brown_
+
+한 층에 여러 뉴런이 있으니까 이제는 $L-1$ 층의 $k$ 뉴런과 $L$ 층에 $j$ 뉴런을 연결하는 가중치를 $w_{jk}^{(L)}$ 라 표기하면 $\frac{\delta C_0}{\delta w_{jk}^{(L)}}$ 은 아래와 같이 구해져. 아까 봤던 것과 동일해.
+
+$\frac{\delta C_0}{\delta w_{jk}^{(L)}} = \frac{\delta z_{j}^{(L)}}{\delta w_{jk}^{(L)}} \frac{\delta a_{j}^{(L)}}{\delta z_{j}^{(L)}} \frac{\delta C_0}{\delta a_{j}^{(L)}}$
+
+이제 활성화에 대한 미분값을 구하면 아까와 간단한 예제와 비슷하게 구할 수 있어.
+
+ - $ \frac{\delta C_0}{\delta a_{j}^{(L)}} = 2 (a_{j}^{(L)}- y_j) + \sum_{l \neq j} (a_{l}^{(L)}- y_l)^2$
+ - $ \frac{\delta C_0}{\delta a_{j}^{(L')}} = \sum_{k=0}^{n_{L'+1}} \frac{\delta z_{k}^{(L'+1)}}{\delta a_{j}^{(L')}} \frac{\delta a_{k}^{(L'+1)}}{\delta z_{k}^{(L'+1)}} \frac{\delta C_0}{\delta a_{k}^{(L'+1)}}$, $L'=0, ... , L-1$.
+ 
+아까와 마찬가지로 위와 같이 모든 활성화에 대한 미분값을 구하면, 뉴런이 아무리 늘어나도 동일한 방식으로 가중치의 미분, 즉 gradient 를 계산할 수 있어.
