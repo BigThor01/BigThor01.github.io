@@ -8,7 +8,7 @@ tag: ["Bagpropagation"]
 
 오늘은 다음 영상을 참고해서 수식을 통해 실제로 gradient 를 구해보는 작업에 대해 정리해볼께.
 
- - [역전파 미적분 | 심층 학습, 4장, 3Blue1Brown youtube](https://youtu.be/tIeHLnjs5U8)
+ - [역전파 미적분 / 심층 학습, 4장, 3Blue1Brown youtube](https://youtu.be/tIeHLnjs5U8)
 
 
 자세한 내용을 보기 전에, 오늘 다룰 내용을 간략히 소개하고 시작할께.
@@ -49,9 +49,9 @@ Cost 에 대한 가중치의 gradient 는 가중치 변동이 cost 를 얼마나
 
 $\frac{\delta C_0}{\delta w^{(L)}} = \frac{\delta z^{(L)}}{\delta w^{(L)}} \frac{\delta a^{(L)}}{\delta z^{(L)}} \frac{\delta C_0}{\delta a^{(L)}}$
 
-$\rightarrow \frac{\delta C_0}{\delta w^{(L)}} = a^{(L-1)}}\ \delta ' (z^{(L)}})\ 2 ( a^{(L)}} - y)$
+$\rightarrow \frac{\delta C_0}{\delta w^{(L)}} = a^{(L-1)}\ \delta ' (z^{(L)})\ 2 ( a^{(L)} - y)$
 
-식을 보면 가중치의 영향은 가중치가 연결된 이전 층 뉴런의 활성화 정도($a^{(L-1)}}$), 출력값과 실제값의 차이($ a^{(L)}} - y$) 에 비례한다는 사실을 알 수 있어.
+식을 보면 가중치의 영향은 가중치가 연결된 이전 층 뉴런의 활성화 정도($a^{(L-1)}$), 출력값과 실제값의 차이($ a^{(L)} - y$) 에 비례한다는 사실을 알 수 있어.
 
 사실 위의 식은 하나의 예제에 대해서만 미분값을 구해본 거고, 모든 예제에 대해서 구해보면 다음과 같이 쉽게 구할 수 있어 (그건 cost 함수는 각 예제의 cost 를 평균해서 구하기 때문이지)
 
@@ -64,12 +64,12 @@ $\frac{\delta C_0}{\delta w^{(L)}}$ 은 구했으니, 그럼 그 이전의 $(L-2
 
 $\frac{\delta C_0}{\delta w^{(L-1)}} = \frac{\delta z^{(L-1)}}{\delta w^{(L-1)}} \frac{\delta a^{(L-1)}}{\delta z^{(L-1)}} \frac{\delta C_0}{\delta a^{(L-1)}}$
 
-$\rightarrow \frac{\delta C_0}{\delta w^{(L-1)}} = a^{(L-2)}}\ \delta ' (z^{(L-1)}})\ \frac{\delta C_0}{\delta a^{(L-1)}} $
+$\rightarrow \frac{\delta C_0}{\delta w^{(L-1)}} = a^{(L-2)}\ \delta ' (z^{(L-1)})\ \frac{\delta C_0}{\delta a^{(L-1)}} $
 
 
-아까 전에 $\frac{\delta C}{\delta w^{(L)}}$ 와 위의 $\frac{\delta C}{\delta w^{(L-1)}} 를 보면 $\frac{\delta C_0}{\delta a^{(L)}}$, $\frac{\delta C_0}{\delta a^{(L-1)}}$ 처럼 가중치가 연결된 이후 뉴런 활성화의 미분값이 포함됨을 알 수 있어.
+아까 전에 $\frac{\delta C}{\delta w^{(L)}}$ 와 위의 $\frac{\delta C}{\delta w^{(L-1)}}$ 를 보면 $\frac{\delta C_0}{\delta a^{(L)}}$, $\frac{\delta C_0}{\delta a^{(L-1)}}$ 처럼 가중치가 연결된 이후 뉴런 활성화의 미분값이 포함됨을 알 수 있어.
 
-$a^{(L-1)}}\ \delta ' (z^{(L)}})$, $a^{(L-2)}}\ \delta ' (z^{(L-1)}})$ 은 네트워크를 통과하면서 쉽게 구해지는 값이므로 우리는 위의 활성화에 대한 미분값만 구하면 gradient 를 쉽게 구할 수 있겠지.
+$a^{(L-1)}\ \delta ' (z^{(L)})$, $a^{(L-2)}\ \delta ' (z^{(L-1)})$ 은 네트워크를 통과하면서 쉽게 구해지는 값이므로 우리는 위의 활성화에 대한 미분값만 구하면 gradient 를 쉽게 구할 수 있겠지.
 
 <a href="https://i.imgur.com/Jve1ss6"><img src="https://i.imgur.com/Jve1ss6.png" width="700px" title="source: imgur.com" /></a>_@3Blue1Brown_
 
