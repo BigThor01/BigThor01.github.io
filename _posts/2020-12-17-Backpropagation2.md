@@ -93,6 +93,9 @@ $a^{(L-1)}\ \delta ' (z^{(L)})$, $a^{(L-2)}\ \delta ' (z^{(L-1)})$ 은 네트워
 
 $\frac{\delta C_0}{\delta w_{jk}^{(L)}} = \frac{\delta z_{j}^{(L)}}{\delta w_{jk}^{(L)}} \frac{\delta a_{j}^{(L)}}{\delta z_{j}^{(L)}} \frac{\delta C_0}{\delta a_{j}^{(L)}}$
 
+
+<a href="https://i.imgur.com/x0TOg2Z"><img src="https://i.imgur.com/x0TOg2Z.png" width="700px" title="source: imgur.com" /></a>_@3Blue1Brown_
+
 이제 활성화에 대한 미분값을 구하면 아까와 간단한 예제와 비슷하게 구할 수 있어.
 
  - $ \frac{\delta C_0}{\delta a_{j}^{(L)}} = 2 (a_{j}^{(L)}- y_j) + \sum_{l \neq j} (a_{l}^{(L)}- y_l)^2$
