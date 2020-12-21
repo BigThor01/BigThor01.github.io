@@ -99,6 +99,6 @@ $\frac{\partial C_0}{\partial w_{jk}^{(L)}} = \frac{\partial z_{j}^{(L)}}{\parti
 이제 활성화에 대한 미분값을 구하면 아까와 간단한 예제와 비슷하게 구할 수 있어.
 
  - $ \frac{\partial C_0}{\partial a_{j}^{(L)}} = 2 (a_{j}^{(L)}- y_j) + \sum_{l \neq j} (a_{l}^{(L)}- y_l)^2$
- - $ \frac{\partial C_0}{\partial a_{j}^{(L')}} = \sum_{k=0}^{n_{L'-1}} \frac{\partial z_{k}^{(L'+1)}}{\partial a_{j}^{(L')}} \frac{\partial a_{k}^{(L'+1)}}{\partial z_{k}^{(L'+1)}} \frac{\partial C_0}{\partial a_{k}^{(L'+1)}}$, $L'=0, ... , L-1$.
+ - $ \frac{\partial C_0}{\partial a_{j}^{(L')}} = \sum_{k=0}^{n_{L'-1}-1} \frac{\partial z_{k}^{(L'+1)}}{\partial a_{j}^{(L')}} \frac{\partial a_{k}^{(L'+1)}}{\partial z_{k}^{(L'+1)}} \frac{\partial C_0}{\partial a_{k}^{(L'+1)}}$, $L'=0, ... , L-1$.
  
 아까와 마찬가지로 위와 같이 모든 활성화에 대한 미분값을 구하면, 뉴런이 아무리 늘어나도 동일한 방식으로 가중치의 미분, 즉 gradient 를 계산할 수 있어.
