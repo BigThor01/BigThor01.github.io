@@ -45,38 +45,38 @@ Cost 에 대한 가중치의 gradient 는 가중치 변동이 cost 를 얼마나
  - $a^{(L)} = \sigma (z^{(L)})$, $\sigma (.)$ 는 활성화함수
  - $C_0 = (a^{(L)} - y)^2$
  
-위의 관계를 가지고 우리는 $C_0위$ 를 가중치 $w^{(L)}$ 로 미분한 $\frac{\delta C_0}{\delta w^{(L)}}$ 을 연쇄법칙을 통해 구할 수 있어.
+위의 관계를 가지고 우리는 $C_0위$ 를 가중치 $w^{(L)}$ 로 미분한 $\frac{\partial C_0}{\partial w^{(L)}}$ 을 연쇄법칙을 통해 구할 수 있어.
 
-$\frac{\delta C_0}{\delta w^{(L)}} = \frac{\delta z^{(L)}}{\delta w^{(L)}} \frac{\delta a^{(L)}}{\delta z^{(L)}} \frac{\delta C_0}{\delta a^{(L)}}$
+$\frac{\partial C_0}{\partial w^{(L)}} = \frac{\partial z^{(L)}}{\partial w^{(L)}} \frac{\partial a^{(L)}}{\partial z^{(L)}} \frac{\partial C_0}{\partial a^{(L)}}$
 
-$\rightarrow \frac{\delta C_0}{\delta w^{(L)}} = a^{(L-1)}\ \delta ' (z^{(L)})\ 2 ( a^{(L)} - y)$
+$\rightarrow \frac{\partial C_0}{\partial w^{(L)}} = a^{(L-1)}\ \sigma ´ (z^{(L)})\ 2 ( a^{(L)} - y)$
 
 식을 보면 가중치의 영향은 가중치가 연결된 이전 층 뉴런의 활성화 정도($a^{(L-1)}$), 출력값과 실제값의 차이($ a^{(L)} - y$) 에 비례한다는 사실을 알 수 있어.
 
 사실 위의 식은 하나의 예제에 대해서만 미분값을 구해본 거고, 모든 예제에 대해서 구해보면 다음과 같이 쉽게 구할 수 있어 (그건 cost 함수는 각 예제의 cost 를 평균해서 구하기 때문이지)
 
-$\frac{\delta C}{\delta w^{(L)}} = \sum_{i=0}^{n-1} \frac{\delta z_i^{(L)}}{\delta w^{(L)}} \frac{\delta a_i^{(L)}}{\delta z_i^{(L)}} \frac{\delta C}{\delta a_i^{(L)}}$
+$\frac{\partial C}{\partial w^{(L)}} = \sum_{i=0}^{n-1} \frac{\partial z_i^{(L)}}{\delta w^{(L)}} \frac{\partial a_i^{(L)}}{\partial z_i^{(L)}} \frac{\partial C}{\partial a_i^{(L)}}$
 
 
-$\frac{\delta C_0}{\delta w^{(L)}}$ 은 구했으니, 그럼 그 이전의 $(L-2)$ 와 $(L-1)$ 사이의 가중치 $w^{(L-1)}$ 에 대한 미분값을 구해볼까?
+$\frac{\partial C_0}{\partial w^{(L)}}$ 은 구했으니, 그럼 그 이전의 $(L-2)$ 와 $(L-1)$ 사이의 가중치 $w^{(L-1)}$ 에 대한 미분값을 구해볼까?
 
 위에서 한 것처럼 연쇄법칙을 통해 구하게 되면
 
-$\frac{\delta C_0}{\delta w^{(L-1)}} = \frac{\delta z^{(L-1)}}{\delta w^{(L-1)}} \frac{\delta a^{(L-1)}}{\delta z^{(L-1)}} \frac{\delta C_0}{\delta a^{(L-1)}}$
+$\frac{\partial C_0}{\partial w^{(L-1)}} = \frac{\partial z^{(L-1)}}{\partial w^{(L-1)}} \frac{\partial a^{(L-1)}}{\partial z^{(L-1)}} \frac{\partial C_0}{\partial a^{(L-1)}}$
 
-$\rightarrow \frac{\delta C_0}{\delta w^{(L-1)}} = a^{(L-2)}\ \delta ' (z^{(L-1)})\ \frac{\delta C_0}{\delta a^{(L-1)}} $
+$\rightarrow \frac{\partial C_0}{\partial w^{(L-1)}} = a^{(L-2)}\ \sigma ´ (z^{(L-1)})\ \frac{\partial C_0}{\partial a^{(L-1)}} $
 
 
-아까 전에 $\frac{\delta C}{\delta w^{(L)}}$ 와 위의 $\frac{\delta C}{\delta w^{(L-1)}}$ 를 보면 $\frac{\delta C_0}{\delta a^{(L)}}$, $\frac{\delta C_0}{\delta a^{(L-1)}}$ 처럼 가중치가 연결된 이후 뉴런 활성화의 미분값이 포함됨을 알 수 있어.
+아까 전에 $\frac{\partial C}{\partial w^{(L)}}$ 와 위의 $\frac{\partial C}{\partial w^{(L-1)}}$ 를 보면 $\frac{\partial C_0}{\partial a^{(L)}}$, $\frac{\partial C_0}{\partial a^{(L-1)}}$ 처럼 가중치가 연결된 이후 뉴런 활성화의 미분값이 포함됨을 알 수 있어.
 
-$a^{(L-1)}\ \delta ' (z^{(L)})$, $a^{(L-2)}\ \delta ' (z^{(L-1)})$ 은 네트워크를 통과하면서 쉽게 구해지는 값이므로 우리는 위의 활성화에 대한 미분값만 구하면 gradient 를 쉽게 구할 수 있겠지.
+$a^{(L-1)}\ \sigma´(z^{(L)})$, $a^{(L-2)}\ \sigma ´(z^{(L-1)})$ 은 네트워크를 통과하면서 쉽게 구해지는 값이므로 우리는 위의 활성화에 대한 미분값만 구하면 gradient 를 쉽게 구할 수 있겠지.
 
 <a href="https://i.imgur.com/Jve1ss6"><img src="https://i.imgur.com/Jve1ss6.png" width="700px" title="source: imgur.com" /></a>_@3Blue1Brown_
 
 위를 보면 활성화에 대한 미분값은 그 전에 연산된 활성화의 미분값을 가지고 다음과 같이 재귀적 계산으로 구할 수 있어.
 
- - $ \frac{\delta C_0}{\delta a^{(L)}} = 2 (a^{(L)}- y)$
- - $ \frac{\delta C_0}{\delta a^{(L')}} = \frac{\delta z^{(L'+1)}}{\delta a^{(L')}} \frac{\delta a^{(L'+1)}}{\delta z^{(L'+1)}} \frac{\delta C_0}{\delta a^{(L'+1)}}$, $L'=0, ... , L-1$.
+ - $ \frac{\partial C_0}{\partial a^{(L)}} = 2 (a^{(L)}- y)$
+ - $ \frac{\partial C_0}{\partial a^{(L')}} = \frac{\partial z^{(L'+1)}}{\partial a^{(L')}} \frac{\partial a^{(L'+1)}}{\partial z^{(L'+1)}} \frac{\partial C_0}{\partial a^{(L'+1)}}$, $L'=0, ... , L-1$.
  
  
 이렇게 뒤에서부터 활성화에 대한 미분값을 순차적으로 구할 수 있고, 이 것을 가지고 다시 가중치에 대한 gradient 를 구할 수 있는거야. 이렇게 구해가는 알고리즘이 바로 역전파 알고리즘이야.
@@ -89,16 +89,16 @@ $a^{(L-1)}\ \delta ' (z^{(L)})$, $a^{(L-2)}\ \delta ' (z^{(L-1)})$ 은 네트워
 
 <a href="https://i.imgur.com/mskdA4y"><img src="https://i.imgur.com/mskdA4y.png" width="700px" title="source: imgur.com" /></a>_@3Blue1Brown_
 
-한 층에 여러 뉴런이 있으니까 이제는 $L-1$ 층의 $k$ 뉴런과 $L$ 층에 $j$ 뉴런을 연결하는 가중치를 $w_{jk}^{(L)}$ 라 표기하면 $\frac{\delta C_0}{\delta w_{jk}^{(L)}}$ 은 아래와 같이 구해져. 아까 봤던 것과 동일해.
+한 층에 여러 뉴런이 있으니까 이제는 $L-1$ 층의 $k$ 뉴런과 $L$ 층에 $j$ 뉴런을 연결하는 가중치를 $w_{jk}^{(L)}$ 라 표기하면 $\frac{\partial C_0}{\partial w_{jk}^{(L)}}$ 은 아래와 같이 구해져. 아까 봤던 것과 동일해.
 
-$\frac{\delta C_0}{\delta w_{jk}^{(L)}} = \frac{\delta z_{j}^{(L)}}{\delta w_{jk}^{(L)}} \frac{\delta a_{j}^{(L)}}{\delta z_{j}^{(L)}} \frac{\delta C_0}{\delta a_{j}^{(L)}}$
+$\frac{\partial C_0}{\partial w_{jk}^{(L)}} = \frac{\partial z_{j}^{(L)}}{\partial w_{jk}^{(L)}} \frac{\partial a_{j}^{(L)}}{\partial z_{j}^{(L)}} \frac{\partial C_0}{\partial a_{j}^{(L)}}$
 
 
 <a href="https://i.imgur.com/x0TOg2Z"><img src="https://i.imgur.com/x0TOg2Z.png" width="700px" title="source: imgur.com" /></a>_@3Blue1Brown_
 
 이제 활성화에 대한 미분값을 구하면 아까와 간단한 예제와 비슷하게 구할 수 있어.
 
- - $ \frac{\delta C_0}{\delta a_{j}^{(L)}} = 2 (a_{j}^{(L)}- y_j) + \sum_{l \neq j} (a_{l}^{(L)}- y_l)^2$
- - $ \frac{\delta C_0}{\delta a_{j}^{(L')}} = \sum_{k=0}^{n_{L'+1}} \frac{\delta z_{k}^{(L'+1)}}{\delta a_{j}^{(L')}} \frac{\delta a_{k}^{(L'+1)}}{\delta z_{k}^{(L'+1)}} \frac{\delta C_0}{\delta a_{k}^{(L'+1)}}$, $L'=0, ... , L-1$.
+ - $ \frac{\partial C_0}{\partial a_{j}^{(L)}} = 2 (a_{j}^{(L)}- y_j) + \sum_{l \neq j} (a_{l}^{(L)}- y_l)^2$
+ - $ \frac{\partial C_0}{\partial a_{j}^{(L')}} = \sum_{k=0}^{n_{L'+1}} \frac{\partial z_{k}^{(L'+1)}}{\partial a_{j}^{(L')}} \frac{\partial a_{k}^{(L'+1)}}{\partial z_{k}^{(L'+1)}} \frac{\partial C_0}{\partial a_{k}^{(L'+1)}}$, $L'=0, ... , L-1$.
  
 아까와 마찬가지로 위와 같이 모든 활성화에 대한 미분값을 구하면, 뉴런이 아무리 늘어나도 동일한 방식으로 가중치의 미분, 즉 gradient 를 계산할 수 있어.
