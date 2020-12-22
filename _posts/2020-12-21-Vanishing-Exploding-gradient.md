@@ -35,11 +35,11 @@ Unstable gradient 문제는 깊은 층의 네트워크에서 구조적으로 발
  - $\frac{\partial C}{\partial b_1} = \sigma´ (z_1) \times  w_2 \times \sigma´ (z_2) \times  w_3 \times \sigma´ (z_3) \times w_4 \times \sigma´ (z_4) \times \frac{\partial C}{\partial a_4}$
 
  - $\frac{\partial C}{\partial w_4} = a_3 \times \sigma´ (z_4) \times \frac{\partial C}{\partial a_4}$
- - $\frac{\partial C}{\partial w_3} = a_2 \sigma´ (z_3) \times w_4 \times \sigma´ (z_4) \times \frac{\partial C}{\partial a_4}$
- - $\frac{\partial C}{\partial w_2} = a_1 \sigma´ (z_2) \times  w_3 \times \sigma´ (z_3) \times w_4 \times \sigma´ (z_4) \times \frac{\partial C}{\partial a_4}$
- - $\frac{\partial C}{\partial w_1} = a_0 \sigma´ (z_1) \times  w_2 \times \sigma´ (z_2) \times  w_3 \times \sigma´ (z_3) \times w_4 \times \sigma´ (z_4) \times \frac{\partial C}{\partial a_4}$
+ - $\frac{\partial C}{\partial w_3} = a_2 \times\sigma´ (z_3) \times w_4 \times \sigma´ (z_4) \times \frac{\partial C}{\partial a_4}$
+ - $\frac{\partial C}{\partial w_2} = a_1 \times\sigma´ (z_2) \times  w_3 \times \sigma´ (z_3) \times w_4 \times \sigma´ (z_4) \times \frac{\partial C}{\partial a_4}$
+ - $\frac{\partial C}{\partial w_1} = a_0 \times\sigma´ (z_1) \times  w_2 \times \sigma´ (z_2) \times  w_3 \times \sigma´ (z_3) \times w_4 \times \sigma´ (z_4) \times \frac{\partial C}{\partial a_4}$
 
 위에 각 term 의 위치는 실제로 네트워크에서의 순서와 동일한 순서로 작성 했어. 위에서 보면 공통적으로 다음의 term 이 들어감을 알 수 있어.
 
- - $w_j \sigma´ (z_j)$, 사실 얘는 $\frac{\partial a_j}{\partial a_{j-1}$ !
+ - $w_j \sigma´ (z_j)$, 사실 얘는 $\frac{\partial a_j}{\partial a_{j-1}}$ !
  
