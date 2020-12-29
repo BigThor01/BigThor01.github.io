@@ -90,9 +90,9 @@ $\rightarrow  \sigma´ (z_1) \times  w_2 \times \sigma´ (z_2) \times  w_3 \time
 <a href="https://i.imgur.com/5zMEqeI"><img src="https://i.imgur.com/5zMEqeI.png" width="700px" title="source: imgur.com" /></a>_@Why are deep neural networks hard to train?
  by Nielsen_
 
-보통 가중치/편향 초기화는 $N(0,1)$ 을 사용하므로, 보통 $|w_i| < 4$ 을 만족하게 돼 (실제로는 0.99994 확률로 만족).
+보통 가중치/편향 초기화는 $N(0,1)$ 을 사용하므로, 보통 $\|w_i\| < 4$ 을 만족하게 돼 (실제로는 0.99994 확률로 만족).
 
-그럼 거의 대부분 경우에 $|w_i \sigma´ (z_i) < 1$ 을 만족한다는거지.
+그럼 거의 대부분 경우에 $\|w_i \sigma´ (z_i)\| < 1$ 을 만족한다는거지.
 
 한 layer 씩 앞으로 갈수록 해당 term 이 곱해져서 결국 exponentially 작아지게 되고, 결국 네트워크의 앞에 있는 gradient 는 vanishing 하게 돼.
 
@@ -107,7 +107,7 @@ $\rightarrow \Sigma´ (z^l) \ (w^{l+1})^\intercal\ \Sigma´ (z^{l+1}) \ (w^{l+2}
 
 위의 식으로부터 $\frac{\partial C}{\partial b^l}$ 의 upper bound 를 구해보자.
 
-이 때 $||Ax|| \leq ||A|| \cdot ||x||$, $||AB|| \leq ||A|| \cdot ||B||$ 부등식을 활용해서 구할 수 있어.
+이 때 $\|\|Ax\|\| \leq \|\|A\|\| \cdot \|\|x\|\|$, $\|\|AB\|\| \leq \|\|A\|\| \cdot \|\|B\|\|$ 부등식을 활용해서 구할 수 있어.
 
 위에서의 행렬 norm 은 induced matrix norm ($||A|| = \sup_{||x||=1} Ax$) 이야.
 
