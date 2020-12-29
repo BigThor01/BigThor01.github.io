@@ -43,8 +43,8 @@ Unstable gradient 문제는 깊은 층의 네트워크에서 구조적으로 발
 
 $\delta_l = \frac{\partial C}{\partial z_l}$ 이라고 표현하면 위의 gradient 는 다음과 같이 표현할 수 있지.
 
- - $\frac{\partial C}{\partial b_4} = \delta_4$, ..., $\frac{\partial C}{\partial b_1} = \delta_1$ 
- - $\frac{\partial C}{\partial w_4} = a_3 \times \delta_4$, ..., $\frac{\partial C}{\partial w_1} = a_0 \times \delta_1$ 
+ - $\frac{\partial C}{\partial b_4} = \delta_4$, $\cdots$, $\frac{\partial C}{\partial b_1} = \delta_1$ 
+ - $\frac{\partial C}{\partial w_4} = a_3 \times \delta_4$, $\cdots$, $\frac{\partial C}{\partial w_1} = a_0 \times \delta_1$ 
 
 여기에서 $\delta$ 는 다음과 같이 표현할 수 있어.
 
