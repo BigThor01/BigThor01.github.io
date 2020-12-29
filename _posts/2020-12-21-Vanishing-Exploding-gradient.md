@@ -43,15 +43,8 @@ Unstable gradient 문제는 깊은 층의 네트워크에서 구조적으로 발
 
 $\delta_l = \frac{\partial C}{\partial z_l}$ 이라고 표현하면 위의 gradient 는 다음과 같이 표현할 수 있지.
 
- - $\frac{\partial C}{\partial b_4} = \delta_4$
- - $\frac{\partial C}{\partial b_3} = \delta_3$
- - $\frac{\partial C}{\partial b_2} = \delta_2$
- - $\frac{\partial C}{\partial b_1} = \delta_1$
- 
- - $\frac{\partial C}{\partial w_4} = a_3 \times \delta_4$
- - $\frac{\partial C}{\partial w_3} = a_2 \times \delta_3$
- - $\frac{\partial C}{\partial w_2} = a_1 \times \delta_2$
- - $\frac{\partial C}{\partial w_1} = a_0 \times \delta_1$ 
+ - $\frac{\partial C}{\partial b_4} = \delta_4$, ..., $\frac{\partial C}{\partial b_1} = \delta_1$ 
+ - $\frac{\partial C}{\partial w_4} = a_3 \times \delta_4$, ..., $\frac{\partial C}{\partial w_1} = a_0 \times \delta_1$ 
 
 여기에서 $\delta$ 는 다음과 같이 표현할 수 있어.
 
@@ -117,5 +110,39 @@ $\rightarrow \Sigma´ (z^l) \ (w^{l+1})^\intercal\ \Sigma´ (z^{l+1}) \ (w^{l+2}
 이 때 $||Ax|| \leq ||A|| \cdot ||x||$, $||AB|| \leq ||A|| \cdot ||B||$ 부등식을 활용해서 구할 수 있어.
 
 위에서의 행렬 norm 은 induced matrix norm ($||A|| = \sup_{||x||=1} Ax$) 이야.
+
+$||\frac{\partial C}{\partial b^l} || = ||\Sigma´ (z^l) \ (w^{l+1})^\intercal ... \Sigma´ (z^{L-1}) \ (w^{L})^\intercal\ \Sigma´ (z^{L})\ (a^L -y)||$
+
+$\leq ||\Sigma´ (z^l)|| \cdot ||(w^{l+1})^\intercal|| \cdot .... \cdot ||\Sigma´ (z^{L-1})|| \cdot ||(w^{L})^\intercal|| \cdot ||\Sigma´ (z^{L})|| \cdot ||(a^L -y)||$
+
+$= \prod_{r=l}^L ||\Sigma´ (z^r)|| \cdot \prod_{r=l+1}^L ||(w^{r})^\intercal||  \cdot  ||(a^L -y)||$
+
+여기에서 $\gamma = \sup \{\sigma´ (\alpha) : \alpha \in R\}$ 이라고 하면, $||A|| = \max (singular\ value)$ 이기 때문에 다음과 같은 식이 얻어져.
+
+$||\frac{\partial C}{\partial b^l} || \leq \gamma^{L-l+1} \cdot \prod_{r=l+1}^{L} ||w^r|| \cdot ||a^L-y||$
+
+Sigmoid 나 tanh 를 사용하는 경우, $\gamma \leq 1$ 이기 때문에 $l$ 이 작아질수록 점점 exponentially 작아지게 되는거야.
+
+## Exploding gradient 가 발생하는 경우도 있다.
+
+$\frac{\partial C}{\partial b_1} = \sigma´ (z_1) \times  w_2 \times \sigma´ (z_2) \times  w_3 \times \sigma´ (z_3) \times w_4 \times \sigma´ (z_4) \times \frac{\partial C}{\partial a_4}$
+
+위 식에서 만약 $w_2 = w_3 = w_4 = 100$ 이고, $\sigma´ (z_l)$ 들이 모두 그렇게 작지 않다고 하자 (거의 $1/4$ 근처).
+
+그렇다면 $\frac{\partial C}{\partial b_1}$ 는 뒤 layer 의 gradient 보다 더 커지게 되고, 만약 이런 식으로 더 앞 layer 까지 늘어난다면 gradient 가 폭발적으로 커질 수도 있어.
+
+물론 많은 경우, exploding gradient 보다는 vanishing gradient 현상이 발생하게 돼. 왜냐면 실제로 $w$ 가 커지게 되면 이와 상충되게 $\sigma´$ 는 작아지고 거의 $0$ 에 가까워질 가능성이 높기 때문이지.
+
+---
+## 요약하면
+
+Vanishing/exploding gradient 는 모두 앞 layer 가 뒤의 layer 에 term 들의 곱으로 표현되기 때문에 발생하는 문제야.
+
+즉, 층에 따라 앞과 뒤에서 서로 다른 속도로 학습이 될 수 밖에 없는 구조로 인해 제대로 학습되지 않는 문제가 생기는 거야. 뒤에 있는 parameter 는 움직이지만 앞에 있는 것들은 거의 초기값에서 변화가 없는거지. 혹은 앞에 있는 parameter 가 크게 진동해서 수렴을 하지 않던가.
+
+Sigmoid/tanh 를 사용하는 경우에는 미분값이 0~1 사이이므로 vanishing 현상이 일어나게 돼.
+
+다음에는 이러한 구조적인 문제에서 발생하는 unstable gradient 를 해결하기 위한 방법을 소개할께.
+
 
 
