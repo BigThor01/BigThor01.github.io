@@ -39,7 +39,45 @@ Unstable gradient 문제는 깊은 층의 네트워크에서 구조적으로 발
  - $\frac{\partial C}{\partial w_2} = a_1 \times\sigma´ (z_2) \times  w_3 \times \sigma´ (z_3) \times w_4 \times \sigma´ (z_4) \times \frac{\partial C}{\partial a_4}$
  - $\frac{\partial C}{\partial w_1} = a_0 \times\sigma´ (z_1) \times  w_2 \times \sigma´ (z_2) \times  w_3 \times \sigma´ (z_3) \times w_4 \times \sigma´ (z_4) \times \frac{\partial C}{\partial a_4}$
 
-위에 각 term 의 위치는 실제로 네트워크에서의 순서와 동일한 순서로 작성 했어. 위에서 보면 공통적으로 다음의 term 이 들어감을 알 수 있어.
+위에 각 term 의 위치는 실제로 네트워크에서의 순서와 동일하게 작성 했어. 식에서 알 수 있는 사실은 뒤에 있는 요소에 포함된 term 들이 이전 요소에 동일하게 포함된다는 사실이야.
 
- - $w_j \sigma´ (z_j)$, 사실 얘는 $\frac{\partial a_j}{\partial a_{j-1}}$ !
+$\delta_l = \frac{\partial C}{\partial z_l}$ 이라고 표현하면 위의 gradient 는 다음과 같이 표현할 수 있지.
+
+ - $\frac{\partial C}{\partial b_4} = \delta_4$
+ - $\frac{\partial C}{\partial b_3} = \delta_3$
+ - $\frac{\partial C}{\partial b_2} = \delta_2$
+ - $\frac{\partial C}{\partial b_1} = \delta_1$
+ 
+ - $\frac{\partial C}{\partial w_4} = a_3 \times \delta_4$
+ - $\frac{\partial C}{\partial w_3} = a_2 \times \delta_3$
+ - $\frac{\partial C}{\partial w_2} = a_1 \times \delta_2$
+ - $\frac{\partial C}{\partial w_1} = a_0 \times \delta_1$ 
+
+여기에서 $\delta$ 는 다음과 같이 표현할 수 있어.
+
+ - $\delta_4 = \sigma´ (z_4) \times \frac{\partial C}{\partial a_4}$
+ - $\delta_l = \sigma´ (z_l) \times w_{l+1} \times \delta_{l+1},\ l = 1,2,3$
+ 
+## 복잡한 네트워크에서의 gradient
+
+<a href="https://i.imgur.com/S129Dbi"><img src="https://i.imgur.com/S129Dbi.png" width="700px" title="source: imgur.com" /></a>_@Why are deep neural networks hard to train?
+ by Nielsen_
+ 
+이제 간단한 네트워크에서 복잡한 네트워크로 확장해서 gradient 를 구해보자. 사실 위에서의 표현이 벡터로 확장된 것 이외에는 동일한 포맷으로 전개할 수 있어.
+
+구조가 확장되었으니, 표기를 조금 변경해보자.
+
+ - $l\ (l=0,1,2,...,L)$ 은 층의 번호를 나타내며, $0$ 은 입력층, $L$ 는 출력층
+ - $w^l$ 은 $l-1$ 층과 $l$ 층을 연결하는 가중치 행렬
+    + $w_{ij}^l$ 은 $l-1$ 층의 $j$ 뉴런과 $l$ 층의 $i$ 뉴런 사이의 가중치
+ - $b^l$ 은 $l$ 층 뉴런의 편향 벡터, $b_i^l$ 은 $l$ 층 뉴런의 편향
+ - $l$ 층 뉴런에 입력값 $z^l = w^l a^{l-1} + b^l$, 활성화값 $a^l = \sigma ( z^l)$
+    + $\sigma$ 는 element-wise 로 계산
+ - $\Sigma´ (z^l) = diag (\sigma´ (z^l))$ 을 의미
+
+위의 표기를 이용해서, 기존에 스칼라로 표현했던 $\delta_l$ 을 벡터의 형태로 확장하면,
+
+ - $\delta^L = \frac{\partial C}{\partial z^L} = \Sigma´ (z^L)\ (a^L -y)$
+ - $\delta^l = \frac{\partial C}{\partial z^l} = \Sigma´ (z^l) \ (w^{l+1})^\intercal\ \delta^{l+1},\ l = 1,...,l-1$
+ 
  
