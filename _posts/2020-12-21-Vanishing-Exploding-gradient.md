@@ -68,16 +68,54 @@ $\delta_l = \frac{\partial C}{\partial z_l}$ 이라고 표현하면 위의 gradi
 구조가 확장되었으니, 표기를 조금 변경해보자.
 
  - $l\ (l=0,1,2,...,L)$ 은 층의 번호를 나타내며, $0$ 은 입력층, $L$ 는 출력층
- - $w^l$ 은 $l-1$ 층과 $l$ 층을 연결하는 가중치 행렬
-    + $w_{ij}^l$ 은 $l-1$ 층의 $j$ 뉴런과 $l$ 층의 $i$ 뉴런 사이의 가중치
+ - $w^l$ 은 $l-1$ 층과 $l$ 층을 연결하는 가중치 행렬 ($w_{ij}^l$ 은 $l-1$ 층의 $j$ 뉴런과 $l$ 층의 $i$ 뉴런을 연결)
  - $b^l$ 은 $l$ 층 뉴런의 편향 벡터, $b_i^l$ 은 $l$ 층 뉴런의 편향
- - $l$ 층 뉴런에 입력값 $z^l = w^l a^{l-1} + b^l$, 활성화값 $a^l = \sigma ( z^l)$
-    + $\sigma$ 는 element-wise 로 계산
- - $\Sigma´ (z^l) = diag (\sigma´ (z^l))$ 을 의미
+ - $l$ 층 뉴런에 입력값 $z^l = w^l a^{l-1} + b^l$, 활성화값 $a^l = \sigma ( z^l)$ ($\sigma$ 는 element-wise)
+ - $\Sigma´ (z^l) = diag (\sigma´ (z^l))$ 
 
 위의 표기를 이용해서, 기존에 스칼라로 표현했던 $\delta_l$ 을 벡터의 형태로 확장하면,
 
  - $\delta^L = \frac{\partial C}{\partial z^L} = \Sigma´ (z^L)\ (a^L -y)$
  - $\delta^l = \frac{\partial C}{\partial z^l} = \Sigma´ (z^l) \ (w^{l+1})^\intercal\ \delta^{l+1},\ l = 1,...,l-1$
+
+이고, 이것을 이용해 가중치와 편향에 대한 미분을 구하면 다음과 같아.
+
+ - $\frac{\partial C}{\partial b^l} = \delta^l$
+ - $\frac{\partial C}{\partial w^l} = \delta^l \ (a^{l-1})^\intercal$
  
  
+---
+## Vanishing gradient 가 왜 발생하는가?
+
+**Vanishing gradient 가 발생하는 이유를 확인**하기 위해, 간단한 네트워크에서의 gradient 를 하나 가져와보자.
+
+$\frac{\partial C}{\partial b_1} = \delta_1 = \sigma´ (z_1) \times  w_2 \times \delta_2$
+$\rightarrow  \sigma´ (z_1) \times  w_2 \times \sigma´ (z_2) \times  w_3 \times \sigma´ (z_3) \times w_4 \times \sigma´ (z_4) \times \frac{\partial C}{\partial a_4}$
+
+위의 식은 $w_l \times \sigma´ (z_l)$ 의 곱으로 표현되어있는데, 이 안에 있는 $\sigma´ (z_l)$ 는 항상 $(0,1/4]$ 범위 안에서 존재해.
+
+<a href="https://i.imgur.com/5zMEqeI"><img src="https://i.imgur.com/5zMEqeI.png" width="700px" title="source: imgur.com" /></a>_@Why are deep neural networks hard to train?
+ by Nielsen_
+
+보통 가중치/편향 초기화는 $N(0,1)$ 을 사용하므로, 보통 $|w_i| < 4$ 을 만족하게 돼 (실제로는 0.99994 확률로 만족).
+
+그럼 거의 대부분 경우에 $|w_i \sigma´ (z_i) < 1$ 을 만족한다는거지.
+
+한 layer 씩 앞으로 갈수록 해당 term 이 곱해져서 결국 exponentially 작아지게 되고, 결국 네트워크의 앞에 있는 gradient 는 vanishing 하게 돼.
+
+
+이제 복잡한 네트워크에서 동일한 현상을 설명해볼까?
+
+가중치에 대한 미분은 편향에 대한 gradient 를 구할 수 있기 때문에, 편향에 대한 gradient 만 전개해보자.
+
+$\frac{\partial C}{\partial b^l} = \Sigma´ (z^l) \ (w^{l+1})^\intercal\ \delta^{l+1}$
+
+$\rightarrow \Sigma´ (z^l) \ (w^{l+1})^\intercal\ \Sigma´ (z^{l+1}) \ (w^{l+2})^\intercal\ ... \Sigma´ (z^{L-1}) \ (w^{L})^\intercal\ \Sigma´ (z^{L})\ (a^L -y)$
+
+위의 식으로부터 $\frac{\partial C}{\partial b^l}$ 의 upper bound 를 구해보자.
+
+이 때 $||Ax|| \leq ||A|| \cdot ||x||$, $||AB|| \leq ||A|| \cdot ||B||$ 부등식을 활용해서 구할 수 있어.
+
+위에서의 행렬 norm 은 induced matrix norm ($||A|| = \sup_{||x||=1} Ax$) 이야.
+
+
