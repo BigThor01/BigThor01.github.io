@@ -111,15 +111,15 @@ $\rightarrow \Sigma´ (z^l) \ (w^{l+1})^\intercal\ \Sigma´ (z^{l+1}) \ (w^{l+2}
 
 위에서의 행렬 norm 은 induced matrix norm ($||A|| = \sup_{||x||=1} Ax$) 이야.
 
-$||\frac{\partial C}{\partial b^l} || = ||\Sigma´ (z^l) \ (w^{l+1})^\intercal ... \Sigma´ (z^{L-1}) \ (w^{L})^\intercal\ \Sigma´ (z^{L})\ (a^L -y)||$
+$\|\| \frac{\partial C}{\partial b^l} \|\| = \|\|\Sigma´ (z^l) \ (w^{l+1})^\intercal ... \Sigma´ (z^{L-1}) \ (w^{L})^\intercal\ \Sigma´ (z^{L})\ (a^L -y) \|\| $
 
-$\leq ||\Sigma´ (z^l)|| \cdot ||(w^{l+1})^\intercal|| \cdot .... \cdot ||\Sigma´ (z^{L-1})|| \cdot ||(w^{L})^\intercal|| \cdot ||\Sigma´ (z^{L})|| \cdot ||(a^L -y)||$
+$\leq \|\|\Sigma´ (z^l) \|\|\cdot \|\|(w^{l+1})^\intercal \|\|\cdot .... \cdot \|\|\Sigma´ (z^{L-1}) \|\| \cdot \|\|(w^{L})^\intercal \|\| \cdot \|\| \Sigma´ (z^{L}) \|\|\cdot \|\|(a^L -y) \|\| $
 
 $= \prod_{r=l}^L ||\Sigma´ (z^r)|| \cdot \prod_{r=l+1}^L ||(w^{r})^\intercal||  \cdot  ||(a^L -y)||$
 
-여기에서 $\gamma = \sup \{\sigma´ (\alpha) : \alpha \in R\}$ 이라고 하면, $||A|| = \max (singular\ value)$ 이기 때문에 다음과 같은 식이 얻어져.
+여기에서 $\gamma = \sup \{\sigma´ (\alpha) : \alpha \in R\}$ 이라고 하면, $\|\|A \|\| = \max (singular\ value)$ 이기 때문에 다음과 같은 식이 얻어져.
 
-$||\frac{\partial C}{\partial b^l} || \leq \gamma^{L-l+1} \cdot \prod_{r=l+1}^{L} ||w^r|| \cdot ||a^L-y||$
+$\|\| \frac{\partial C}{\partial b^l} \|\| \leq \gamma^{L-l+1} \cdot \prod_{r=l+1}^{L} \|\| w^r \|\|\cdot \|\| a^L-y \|\| $
 
 Sigmoid 나 tanh 를 사용하는 경우, $\gamma \leq 1$ 이기 때문에 $l$ 이 작아질수록 점점 exponentially 작아지게 되는거야.
 
