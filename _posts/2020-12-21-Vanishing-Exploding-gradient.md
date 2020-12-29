@@ -83,6 +83,7 @@ $\delta_l = \frac{\partial C}{\partial z_l}$ 이라고 표현하면 위의 gradi
 **Vanishing gradient 가 발생하는 이유를 확인**하기 위해, 간단한 네트워크에서의 gradient 를 하나 가져와보자.
 
 $\frac{\partial C}{\partial b_1} = \delta_1 = \sigma´ (z_1) \times  w_2 \times \delta_2$
+
 $\rightarrow  \sigma´ (z_1) \times  w_2 \times \sigma´ (z_2) \times  w_3 \times \sigma´ (z_3) \times w_4 \times \sigma´ (z_4) \times \frac{\partial C}{\partial a_4}$
 
 위의 식은 $w_l \times \sigma´ (z_l)$ 의 곱으로 표현되어있는데, 이 안에 있는 $\sigma´ (z_l)$ 는 항상 $(0,1/4]$ 범위 안에서 존재해.
