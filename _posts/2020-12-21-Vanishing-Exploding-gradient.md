@@ -124,7 +124,7 @@ $\|\| \frac{\partial C}{\partial b^l} \|\| \leq \gamma^{L-l+1} \cdot \prod_{r=l+
 
 Sigmoid 나 tanh 를 사용하는 경우, $\gamma \leq 1$ 이기 때문에 $l$ 이 작아질수록 점점 exponentially 작아지게 되는거야.
 
-_참고 : $w_{in}^r \sim N(0,1)$ 인 경우, $E(\|\| w^r \|\|) \leq \sqrt{ncol} + \sqrt{nrow}$, Rudelson 2010_
+_**참고**_ : $w_{ij}^r \sim N(0,1)$ 인 경우, $E(\|\| w^r \|\|) \leq \sqrt{ncol} + \sqrt{nrow}$, Rudelson 2010
 
 ## Exploding gradient 가 발생하는 경우도 있다.
 
