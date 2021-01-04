@@ -30,3 +30,11 @@ tag: ["Pytorch", "Tensorflow"]
 
 tensorflow, keras 는 위처럼 _pip install 패키지명_ 으로 설치해야해.
 
+<a href="https://i.imgur.com/q8WWAvn"><img src="https://i.imgur.com/q8WWAvn.png" height="20px" title="source: imgur.com" /></a>
+
+jupyter notebook, ipython 도 위와 같이 설치할 수 있어.
+
+<a href="https://i.imgur.com/dmJrvsm"><img src="https://i.imgur.com/dmJrvsm.png" width="700px" title="source: imgur.com" /></a>
+
+ipython 을 통해서 tensorflow, keras 가 잘 설치되었는지 보기 위해 import 해보고 위와 같이 에러가 뜨지 않으면 잘 설치된거야!
+
