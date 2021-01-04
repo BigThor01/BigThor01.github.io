@@ -16,17 +16,17 @@ tag: ["Pytorch", "Tensorflow"]
 
 그래서 가상으로 환경을 만들어서 거기에서 모듈을 설치해서 쓰는거지. 만약 문제가 생기면 그냥 가상환경을 지워버리면 되는 장점이 있어.
 
-<a href="https://i.imgur.com/NLLS1C0"><img src="https://i.imgur.com/NLLS1C0.png" width="800px" title="source: imgur.com" /></a>
+<a href="https://i.imgur.com/NLLS1C0"><img src="https://i.imgur.com/NLLS1C0.png" height="20px" title="source: imgur.com" /></a>
 
 나는 "temp_210104" 라는 이름으로 가상환경을 만들었어. 
 
-<a href="https://i.imgur.com/CLvWjvn"><img src="https://i.imgur.com/CLvWjvn.png" width="800px" title="source: imgur.com" /></a>
+<a href="https://i.imgur.com/CLvWjvn"><img src="https://i.imgur.com/CLvWjvn.png" height="20px" title="source: imgur.com" /></a>
 
 위와 같이 activate 명령어를 이용해서 가상환경을 활성화할 수 있어.
 
-<a href="https://i.imgur.com/2NO8CVz"><img src="https://i.imgur.com/2NO8CVz.png" width="800px" title="source: imgur.com" /></a>
+<a href="https://i.imgur.com/2NO8CVz"><img src="https://i.imgur.com/2NO8CVz.png" height="20px" title="source: imgur.com" /></a>
 
-<a href="https://i.imgur.com/Ssh6Lah"><img src="https://i.imgur.com/Ssh6Lah.png" width="800px" title="source: imgur.com" /></a>
+<a href="https://i.imgur.com/Ssh6Lah"><img src="https://i.imgur.com/Ssh6Lah.png" height="20px" title="source: imgur.com" /></a>
 
 tensorflow, keras 는 위처럼 _pip install 패키지명_ 으로 설치해야해.
 
