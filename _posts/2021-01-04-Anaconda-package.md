@@ -71,3 +71,23 @@ _@Toolkit/cuDNN 압축 해제 및 설치_
 _@CUDA Toolkit 설치 확인_
 
 
+## Tensorflow 설치하기
+
+이제 아까의 _Anaconda Prompt_ 에서 temp_1 가상환경이 활성화된 상태에서 **pip install tensorflow-gpu==2.1.0** 명령어로 2.1.0 버전을 설치했어.
+
+<a href="https://i.imgur.com/zR5unfN"><img src="https://i.imgur.com/zR5unfN.png" width="600px" title="source: imgur.com"/></a>
+_@tensorflow-gpu==2.1.0 버전 설치_
+
+아래와 같이 ipython 을 실행하면 _Anaconda Prompt_ 에서 python 코드를 실행할 수 있어. **import tensorflow as tf** 를 실행했을 때, **Successfully opened dynamic library cudart64_101.dll** 이 나오면 잘 설치된거야. 
+
+파이썬 인터프리터에서 tensorflow 가 GPU 를 사용할 수 있는지는 **tf.config.list_physical_devicex('GPU')** 코드를 실행했을 때, 다음과 깉이 나오면 문제 없이 GPU 를 사용할 수 있는거야.
+
+<a href="https://i.imgur.com/gOPkHAB"><img src="https://i.imgur.com/gOPkHAB.png" width="600px" title="source: imgur.com"/></a>
+_@tensorflow가 GPU를 사용할 수 있는지 확인_
+
+
+
+
+
+
+
