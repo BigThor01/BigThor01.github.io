@@ -88,6 +88,14 @@ _@tensorflow가 GPU를 사용할 수 있는지 확인_
 
 ## Pytorch 설치하기
 
+Pytorch 를 설치를 위해서는 [_pytorch 홈페이지_](https://pytorch.org/get-started/locally/) 에서 나의 환경을 입력하여 명령어를 확인할 수 있어.
 
+<a href="https://i.imgur.com/TEZkUMF"><img src="https://i.imgur.com/TEZkUMF.png" width="600px" title="source: imgur.com"/></a>
+_@Pytorch 홈페이지_
+
+내 환경에 맞는 명령어는 **pip install torch==1.7.1+cu101 torchvision==0.8.2+cu101 torchaudio===0.7.2 -f https://download.pytorch.org/whl/torch_stable.html** 이고, _Anaconda Prompt_ 에서 실행하면 pytorch 를 설치할 수 있어.
+
+<a href="https://i.imgur.com/dOPyCzk"><img src="https://i.imgur.com/dOPyCzk.png" width="600px" title="source: imgur.com"/></a>
+_@Pytorch 설치_
 
 
