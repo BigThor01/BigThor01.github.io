@@ -98,4 +98,13 @@ _@Pytorch 홈페이지_
 <a href="https://i.imgur.com/dOPyCzk"><img src="https://i.imgur.com/dOPyCzk.png" width="600px" title="source: imgur.com"/></a>
 _@Pytorch 설치_
 
+Pytorch 가 잘 설치되었는지, GPU 사용이 가능한지 확인하기 위해 ipython 에서 다음의 코드로 확인할 수 있어.
 
+<a href="https://i.imgur.com/kPW6kTK"><img src="https://i.imgur.com/kPW6kTK.png" width="600px" title="source: imgur.com"/></a>
+_@GPU 사용가능 여부 및 torch 버전 확인_
+
+**torch.cuda.get_device_name(0)** 로 GPU 확인이 가능하고, **torch.cuda.is_available()** 을 통해 GPU 사용이 가능한지 확인할 수 있어.
+
+내 pytorch 버전은 **torch.__version__** 으로 1.7.1 임을 확인할 수 있지.
+
+그럼 pytorch, tensorflow 에서 GPU 활용을 위한 setting 은 다 되었고, 앞으로 사용할 일만 남았어.
