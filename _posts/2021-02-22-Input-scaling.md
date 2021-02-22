@@ -27,3 +27,8 @@ $x_1,x_2,...,x_n$ 의 input 이 있을 때, normalized input $x_1^{\*}, x_2^{\*}
 이렇게 하면 normalized input 은 최소값이 0, 최대값이 1 이 되도록 변환돼.
 
 ### Standardization
+
+Standardization 은 변수의 평균을 0, 분산을 1 로 바꾸는 방법이야.
+
+Standardized input $\tilde{x}_1, \tilde{x}_2,..., \tilde{x}_n$ 은 다음과 같이 구할 수 있어.
+
