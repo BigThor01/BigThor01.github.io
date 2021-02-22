@@ -19,7 +19,7 @@ Input scaling 에는 normalization, standardization 두 가지 방법이 가징 
 
 Normalization 은 변수 값을 0~1 사이로 바꾸는 방법이야.
 
-$x_1,x_2,...,x_n$ 의 input 이 있을 때, normalized input $x_1^*, x_2^*,..., x_n^*$ 은 다음과 같이 구해져.
+$x_1,x_2,...,x_n$ 의 input 이 있을 때, normalized input $x_1^{*}, x_2^{*},..., x_n^{*}$ 은 다음과 같이 구해져.
 
  - $x^*_i = diag (U-L) (x_i -L)$
    + where $U=\max_i x_i, L =\min_i x_i$, 각각은 elementwise 연산
