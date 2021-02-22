@@ -1,7 +1,7 @@
 ---
 title: "딥러닝 기초 - Input scaling"
 category: Deep learning
-tag: ["Input scaling", "Normalization", "Standardization"
+tag: ["Input scaling", "Normalization", "Standardization"]
 ---
 
 Input 데이터를 scaling 하는 작업은 딥러닝 모델 학습에서 거의 필수적으로 포함되어있어.
