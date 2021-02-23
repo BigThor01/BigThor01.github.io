@@ -80,5 +80,5 @@ $ = \sum_i l(F_2(\sigma(W_1 A x_i + W_1 c + b_1), \theta_2), y_i)$
 
 $ = L(W_1 A, W_1c + b_1, \theta_2)$, 여기에서 $A$, $c$ 는 선형변환에 대응되는 행렬과 벡터
 
-위의 결과는 input scaling 해서 만든 $\tilde{L}$ 은 기존의 목적함수 $L$ 을 $w_1, b_1$ 방향으로 stretch/shift 한 것임을 의미해.
+위의 결과는, input scaling 해서 만든 $\tilde{L}$ 은 기존의 목적함수 $L$ 을 $w_1, b_1$ 방향으로 stretch/shift 한 것임을 의미해.
 
