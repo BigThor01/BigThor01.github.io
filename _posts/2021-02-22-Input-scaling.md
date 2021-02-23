@@ -70,7 +70,7 @@ $\tilde{L} (W_1, b_1, \theta_2) = \sum_i l(F_2(F_1(\tilde{x}_i, W_1,b_1), \theta
 
 $F_1(\tilde{x}_i, W_1, b_1 = \sigma (W_1 \tilde{x}_i + b_1)$ 이고 $\tilde{x}_i$ 는 $x_i$ 의 선형변환이라는 사실을 이용하면,
 
-식 $(2)$ 를 다음과 같아.
+식 $(2)$ 는 다음과 같아.
 
 $\tilde{L} (W_1, b_1, \theta_2) = \sum_i l(F_2(\sigma(W_1 \tilde{x}_i + b_1), \theta_2), y_i)$ 
 
