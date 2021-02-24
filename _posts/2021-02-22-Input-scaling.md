@@ -91,7 +91,7 @@ $ = L(W_1 A, W_1c + b_1, \theta_2)$, 여기에서 $A$, $c$ 는 선형변환에 �
 
 ### Input scaling 은 gradient 방향을 최적점으로 향하게 한다.
 
-<a href="https://www.allaboutcircuits.com/uploads/articles/how-to-perform-classification-using-a-neural-network-introducing-the-perceptron_RK_AAC_image1"><img src="https://www.allaboutcircuits.com/uploads/articles/how-to-perform-classification-using-a-neural-network-introducing-the-perceptron_RK_AAC_image1.jpg" width="700px" title="source:imgur.com"/></a>
+<a href="https://www.allaboutcircuits.com/uploads/articles/how-to-perform-classification-using-a-neural-network-introducing-the-perceptron_RK_AAC_image1"><img src="https://www.allaboutcircuits.com/uploads/articles/how-to-perform-classification-using-a-neural-network-introducing-the-perceptron_RK_AAC_image1.jpg" width="650px" title="source:imgur.com"/></a>
 
 첫번째로 위와 같이 입력/출력 층으로만 이루어진 네트워크를 생각해보자. 목적함수 $L$ 은 다음과 같아.
 
@@ -109,10 +109,19 @@ $L(w_1,w_2) = \sum_i \|\|\tilde{y}_i -w^\intercal \tilde{x}_i \|\| ^2$
 
 $= w^\intercal (\sum_i \tilde{x}_i \tilde{x}_i^\intercal )w - 2 (\sum_i \tilde{y}_i \tilde{x}_i^\intercal ) w + C$
 
-$= \|\| (\sum_i \tilde{x}_i \tilde{x}_i^\intercal )^{\frac{1}{2}} w + v \|\| ^2 + C'$
+$= \|\| (\sum_i \tilde{x}_i \tilde{x}_i^\intercal )^{\frac{1}{2}} w + v \|\| ^2 + C'$, 여기에서 $\tilde{x}_i = x_i -\bar{x},\ \tilde{y}_i = y_i -\bar{y}$ 이고, $v,C,C'$ 는 상수를 의미해.
 
-여기에서 $\tilde{x}_i = x_i -\bar{x},\ \tilde{y}_i = y_i -\bar{y}$, $v,C,C'$ 는 상수를 의미해.
+위의 형태를 보면, 목적함수 $L$ 의 등고선은 타원의 형태를 가지며 타원의 장축과 단축은 $x$ 의 분산-공분산 행렬인 $(\sum_i \tilde{x}_i \tilde{x}_i^\intercal )$ 의 eigenvalue 값과 관계가 있어.
 
+타원의 장축은 $\min (eigenvalue)$, 단축은 $\max (eigenvalue)$ 와 반비례해.
+
+$x_1,x_2$ 의 산포 차이가 커질수록 두 egienvalue 차이는 커지며, 그러므로 타원은 더 찌그러진 형태가 돼.
+
+<a href="https://www.jeremyjordan.me/content/images/2018/01/Screen-Shot-2018-01-23-at-2.27.20-PM"><img src="https://www.jeremyjordan.me/content/images/2018/01/Screen-Shot-2018-01-23-at-2.27.20-PM.png" width="700px" title="source:imgur.com"/></a>_@by Nielsen_
+
+위에 등고선을 표현한 그림을 보면, 등고선이 타원에서 원에 가까워질수록 gradient 방향이 최적점을 향함을 알 수 있어. 
+
+결과적으로 input scaling 을 하는 경우, 목적함수의 gradient 방향이 최적점으로 향하게 되면서 더 빠른 속도로 수렴할 수 있는거지.
 ### 실제로 네트워크 학습 속도를 비교해보자.
 
 두번째로 일반적인 네트워크에서 실제 학습 속도에 어떤 차이가 있는지 실험해보자.
