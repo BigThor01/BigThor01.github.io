@@ -117,7 +117,7 @@ $= \|\| (\sum_i \tilde{x}_i \tilde{x}_i^\intercal )^{\frac{1}{2}} w + v \|\| ^2 
 
 $x_1,x_2$ 의 산포 차이가 커질수록 두 egienvalue 차이는 커지며, 그러므로 타원은 더 찌그러진 형태가 돼.
 
-<a href="https://www.jeremyjordan.me/content/images/2018/01/Screen-Shot-2018-01-23-at-2.27.20-PM"><img src="https://www.jeremyjordan.me/content/images/2018/01/Screen-Shot-2018-01-23-at-2.27.20-PM.png" width="700px" title="source:imgur.com"/></a>_@by Nielsen_
+<a href="https://www.jeremyjordan.me/content/images/2018/01/Screen-Shot-2018-01-23-at-2.27.20-PM"><img src="https://www.jeremyjordan.me/content/images/2018/01/Screen-Shot-2018-01-23-at-2.27.20-PM.png" width="700px" title="source:imgur.com"/></a>
 
 위에 등고선을 표현한 그림을 보면, 등고선이 타원에서 원에 가까워질수록 gradient 방향이 최적점을 향함을 알 수 있어. 
 
