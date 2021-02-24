@@ -119,9 +119,4 @@ $= \|\| (\sum_i \tilde{x}_i \tilde{x}_i^\intercal )^{\frac{1}{2}} w + v \|\| ^2 
 
 
 
----
-## Input scaling 의 추가적인 효과는?
-
-
-
 
