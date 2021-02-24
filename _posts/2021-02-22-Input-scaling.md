@@ -91,7 +91,7 @@ $ = L(W_1 A, W_1c + b_1, \theta_2)$, 여기에서 $A$, $c$ 는 선형변환에 �
 
 ### Input scaling 은 gradient 방향을 최적점으로 향하게 한다.
 
-https://www.allaboutcircuits.com/uploads/articles/how-to-perform-classification-using-a-neural-network-introducing-the-perceptron_RK_AAC_image1.jpg
+<a href="https://www.allaboutcircuits.com/uploads/articles/how-to-perform-classification-using-a-neural-network-introducing-the-perceptron_RK_AAC_image1"><img src="https://www.allaboutcircuits.com/uploads/articles/how-to-perform-classification-using-a-neural-network-introducing-the-perceptron_RK_AAC_image1.jpg" width="700px" title="source:imgur.com"/></a>
 
 첫번째로 위와 같이 입력/출력 층으로만 이루어진 네트워크를 생각해보자. 목적함수 $L$ 은 다음과 같아.
 
