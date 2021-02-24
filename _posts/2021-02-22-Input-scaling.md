@@ -105,11 +105,11 @@ $L(w_1, w_2, b)= \sum_i l(\sigma(w^\intercal x_i+b), y_i)$ (식 $(3)$)
 
 그럼 식(3)은 다음과 같이 전개할 수 있어.
 
-$L(w_1,w_2) = \sum_i ||\tilde{y}_i -w^\intercal \tilde{x}_i||^2$
+$L(w_1,w_2) = \sum_i \|\|\tilde{y}_i -w^\intercal \tilde{x}_i \|\| ^2$
 
 $= w^\intercal (\sum_i \tilde{x}_i \tilde{x}_i^\intercal )w - 2 (\sum_i \tilde{y}_i \tilde{x}_i^\intercal ) w + C$
 
-$= || (\sum_i \tilde{x}_i \tilde{x}_i^\intercal )^{\frac{1}{2}} w + v||^2 + C'$
+$= \|\| (\sum_i \tilde{x}_i \tilde{x}_i^\intercal )^{\frac{1}{2}} w + v \|\| ^2 + C'$
 
 여기에서 $\tilde{x}_i = x_i -\bar{x},\ \tilde{y}_i = y_i -\bar{y}$, $v,C,C'$ 는 상수를 의미해.
 
