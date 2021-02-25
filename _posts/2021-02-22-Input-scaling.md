@@ -85,7 +85,9 @@ $ = L(W_1 A, W_1c + b_1, \theta_2)$, 여기에서 $A$, $c$ 는 선형변환에 �
 ---
 ## Input scaling 은 학습 속도 개선에 효과가 있다.
 
-위에서 확인한 것처럼 input scaling 은 첫번째 층의 parameter 방향으로 shift/stretch 하는건데, 이런 작업은 학습 속도 개선에 효과가 있어.
+위에서 확인한 것처럼 input scaling 은 첫번째 층의 parameter 방향으로 shift/stretch 를 하는 작업이야.
+
+목적함수의 mimial 은 동일하지만, 이런 작업은 학습 속도 개선에 효과가 있어.
 
 복잡한 네트워크에서 input scaling 이 정확히 어떻게 working 하는지 확인하기는 어렵기 때문에, 두 가지 간접적인 방법으로 확인해볼꺼야.
 
@@ -115,13 +117,14 @@ $= \|\| (\sum_i \tilde{x}_i \tilde{x}_i^\intercal )^{\frac{1}{2}} w + v \|\| ^2 
 
 타원의 장축은 $\min (eigenvalue)$, 단축은 $\max (eigenvalue)$ 와 반비례해.
 
-$x_1,x_2$ 의 산포 차이가 커질수록 두 egienvalue 차이는 커지며, 그러므로 타원은 더 찌그러진 형태가 돼.
+$x_1,x_2$ 의 산포 차이가 커질수록, 두 변수 사이에 다중공선성이 클수록 두 egienvalue 차이는 커지며, 그러므로 타원은 더 찌그러진 형태가 돼.
 
 <a href="https://www.jeremyjordan.me/content/images/2018/01/Screen-Shot-2018-01-23-at-2.27.20-PM"><img src="https://www.jeremyjordan.me/content/images/2018/01/Screen-Shot-2018-01-23-at-2.27.20-PM.png" width="700px" title="source:imgur.com"/></a>
 
 위에 등고선을 표현한 그림을 보면, 등고선이 타원에서 원에 가까워질수록 gradient 방향이 최적점을 향함을 알 수 있어. 
 
-결과적으로 input scaling 을 하는 경우, 목적함수의 gradient 방향이 최적점으로 향하게 되면서 더 빠른 속도로 수렴할 수 있는거지.
+결과적으로 input scaling 을 하면 변수들의 산포를 동일 수준으로 맞춰지고, 목적함수의 gradient 방향이 최적점으로 향하게 되면서 더 빠른 속도로 수렴할 수 있는거지.
+
 ### 실제로 네트워크 학습 속도를 비교해보자.
 
 두번째로 일반적인 네트워크에서 실제 학습 속도에 어떤 차이가 있는지 실험해보자.
