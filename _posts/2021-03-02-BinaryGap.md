@@ -51,5 +51,5 @@ def solution(N):
  1. N = 210 인 경우,
  2. bin_N = 11010010
  3. one_index = [0, 1, 3, 6]
- 4. [one_index[i+1]-one_index[i]-1 for i in range(len(one_index)-1)] = [1-0, 3-1, 6-3] = [1, 2, 3]
- 5. 위의 max 값은 3
+ 4. [one_index[i+1]-one_index[i]-1 for i in range(len(one_index)-1)] = [1-0-1, 3-1-1, 6-3-1] = [0, 1, 2]
+ 5. 위의 max 값은 2
