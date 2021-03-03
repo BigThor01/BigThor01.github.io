@@ -12,17 +12,17 @@ tag: ["Python","Codility"]
 
 CyclicRotation 문제는 주어진 Array 에 대해, element 들을 한칸씩 뒤로 옮기는 문제야.
 
-예를들어, $A = [3, 8, 9, 7, 6]$ 를 CyclicRotation 하면 맨 뒤의 6 은 맨 앞으로 오고 나머지는 한칸씩 뒤로 가서 $[6, 3, 8, 9, 7]$ 이 되고, 만약 여기에서 한번 더 CyclicRotation 를 하면 $[7, 6, 3, 8, 9]$ 이 돼.
+예를들어, A = [3, 8, 9, 7, 6] 를 CyclicRotation 하면 맨 뒤의 6 은 맨 앞으로 오고 나머지는 한칸씩 뒤로 가서 [6, 3, 8, 9, 7] 이 되고, 만약 여기에서 한번 더 CyclicRotation 를 하면 [7, 6, 3, 8, 9] 이 돼.
 
 우리는 CyclicRoation 횟수인 K 가 주어지면 그에 대응되는 적절한 return 을 구하면 돼. 
 
 ## 코드
 
- - 입력 : A (array consisting of $N$ integer), K (the number of CyclicRotation)
+ - 입력 : A (array consisting of N integer), K (the number of CyclicRotation)
    + N and K are integers within the range [0, ..., 100]
- - 출력 : B (array, result of $K$ CyclicRotations)
+ - 출력 : B (array, result of K CyclicRotations)
 
-이 문제를 처음 보았을 때, 같은 action 을 주어진 $K$ 만큼 수행하니까 다음의 반복문을 사용해서 풀었어.
+이 문제를 처음 보았을 때, 같은 action 을 주어진 K 만큼 수행하니까 다음의 반복문을 사용해서 풀었어.
 
 ```python
 def solution(A,K):
@@ -33,7 +33,7 @@ def solution(A,K):
     return A
 ```
 
-위의 코드로 87 점을 받게 되었는데, 이유는 A = [] 인 경우에 문제가 생기는 거였어. 이 부분과 for 문이 $K$ 에 비례해서 반복되는 부분을 수정해보았어.
+위의 코드로 87 점을 받게 되었는데, 이유는 A = [] 인 경우에 문제가 생기는 거였어. 이 부분과 for 문이 K 에 비례해서 반복되는 부분을 수정해보았어.
 
 ## 코드 수정
 
@@ -55,7 +55,7 @@ def solution(A, K):
 
  1. A = [] 을 받으면 그대로 return A
  2. A!= [] 인 경우, K 를 A 의 길이로 나눈 나머지만큼만 CyclicRotation 하면 됩니다.
- 3. $K <- K \% len(A)$ 를 넣고
+ 3. K <- K % len(A) 를 넣고
  4. A의 (len(A)-K) 번째부터 끝까지 + A의 (len(A)-K-1) 번째 까지로 list 만들어서 return 합니다.
 
 ## 예시
