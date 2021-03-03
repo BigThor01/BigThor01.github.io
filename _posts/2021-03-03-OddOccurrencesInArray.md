@@ -1,6 +1,6 @@
 ---
 title: "[Codility] Lesson02 - Arrays(OddOccurrencesInArray)"
-category: Python Coding
+category: Algorithm
 tag: ["Python","Codility","Algorithm"]
 ---
 
