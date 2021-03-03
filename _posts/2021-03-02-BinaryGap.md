@@ -1,12 +1,12 @@
 ---
 title: "[Codility] Lesson01 - Iteration(BinaryGab)"
-category: Python Coding
-tag: ["Python", "Codility"]
+category: Algorithm
+tag: ["Python", "Codility", "Algorithm"]
 ---
 
 오늘은 Codility 사이트에 있는 Lesson1.Iteration 에 있는 BinaryGab 문제를 풀어보자.
 
-## 문제 Description
+## 문제
 
  - 목적 : **"Find longest sequence of zeros in binary representation of an integer."** 
 
