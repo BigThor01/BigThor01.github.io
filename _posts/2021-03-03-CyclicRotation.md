@@ -1,12 +1,12 @@
 ---
 title: "[Codility] Lesson02 - Arrays(CyclicRotation)"
 category: Python Coding
-tag: ["Python","Codility"]
+tag: ["Python","Codility","Algorithm"]
 ---
 
 오늘은 Codilty 사이트 Lesson2. Arrays 에 있는 CyclicRotation 문제를 풀어보자.
 
-## 문제 Description
+## 문제
 
  - 목적 : "Rotation an array to the right by a given number of steps."
 
