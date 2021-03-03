@@ -55,7 +55,7 @@ def solution(A, K):
 
  1. A = [] 을 받으면 그대로 return A
  2. A!= [] 인 경우, K 를 A 의 길이로 나눈 나머지만큼만 CyclicRotation 하면 됩니다.
- 3. $K <- K % len(A)$ 를 넣고
+ 3. $K <- K \% len(A)$ 를 넣고
  4. A의 (len(A)-K) 번째부터 끝까지 + A의 (len(A)-K-1) 번째 까지로 list 만들어서 return 합니다.
 
 ## 예시
