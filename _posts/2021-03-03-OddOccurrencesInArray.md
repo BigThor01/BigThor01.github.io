@@ -1,12 +1,12 @@
 ---
 title: "[Codility] Lesson02 - Arrays(OddOccurrencesInArray)"
 category: Python Coding
-tag: ["Python","Codility"]
+tag: ["Python","Codility","Algorithm"]
 ---
 
 오늘은 Codilty 사이트 Lesson2. Arrays 에 있는 OddOccurrencesInArray 문제를 풀어보자.
 
-## 문제 Description
+## 문제
 
  - 목적 : "Rotation an array to the right by a given number of steps."
 
@@ -66,3 +66,10 @@ def solution(A, K):
  4. [4, 1, 5, 1, 2] 를 return
 
 
+
+```python
+from functools import reduce
+
+def solution(A):
+    return reduce(lambda x,y: x^y, A)
+```
