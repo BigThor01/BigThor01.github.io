@@ -1,5 +1,5 @@
 ---
-title: "[Codility] Lesson01 - BinaryGab"
+title: "[Codility] Lesson01 - Iteration(BinaryGab)"
 category: Python Coding
 tag: ["Python", "Codility"]
 ---
