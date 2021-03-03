@@ -1,6 +1,6 @@
 ---
 title: "[Codility] Lesson02 - Arrays(CyclicRotation)"
-category: Python Coding
+category: Algorithm
 tag: ["Python","Codility","Algorithm"]
 ---
 
