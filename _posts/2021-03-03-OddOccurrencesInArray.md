@@ -73,3 +73,17 @@ from functools import reduce
 def solution(A):
     return reduce(lambda x,y: x^y, A)
 ```
+
+```python
+# O(N) or O(N*log(N))
+def solution(A):
+    count = dict()
+    
+    for i in A:
+        count[i] = count.get(i,0) + 1
+    
+    for key, value in count.items():
+        if value % 2 == 1:
+            return key
+
+```
