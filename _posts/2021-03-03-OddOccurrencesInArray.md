@@ -44,7 +44,7 @@ def solution(A):
  2. A를 순회하면서, element 값을 key로 count를 value로 저장합니다.
  3. 만들어진 dictionary에서 value가 홀수인 key를 반환합니다.
 
-코드 time complexity : O(N) or O(N logN)
+ - 코드 time complexity : O(N) or O(N logN)
 
 ## 참고 코드
 
@@ -60,4 +60,4 @@ def solution(A):
 
 XOR 연산은 연산 순서에 관계 없으므로 코드를 수행하면, 짝이 있는 element는 0 이 되고 결과적으로 짝이 없는 element만 남게 되는거지.
 
-코드 time complexity : O(N) or O(N logN)
+ - 코드 time complexity : O(N) or O(N logN)
