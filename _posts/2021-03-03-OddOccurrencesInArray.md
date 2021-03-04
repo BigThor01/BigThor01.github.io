@@ -10,81 +10,54 @@ tag: ["Python","Codility","Algorithm"]
 
  - 목적 : "Find value that occurs in odd number of elements."
 
+OddOccurrencesInArray 문제는 일단 non-empty array A 가 주어질 때, 조건에 맞는 element 를 return 하는 문제야.
 
-CyclicRotation 문제는 주어진 Array 에 대해, element 들을 한칸씩 뒤로 옮기는 문제야.
+주어진 A 는 홀수 N 개의 element 로 이루어진 array 인데, 그 중 1개 element 를 제외하고 모두 각자 같은 값을 갖는 짝을 가지고 있어.
 
-예를들어, $A = [3, 8, 9, 7, 6]$ 를 CyclicRotation 하면 맨 뒤의 6 은 맨 앞으로 오고 나머지는 한칸씩 뒤로 가서 $[6, 3, 8, 9, 7]$ 이 되고, 만약 여기에서 한번 더 CyclicRotation 를 하면 $[7, 6, 3, 8, 9]$ 이 돼.
+짝이 없는 1개의 element 를 찾는게 문제의 목적이야.
 
-우리는 CyclicRoation 횟수인 K 가 주어지면 그에 대응되는 적절한 return 을 구하면 돼. 
+예를들어, A = [9, 3, 9, 3, 9, 7, 9] 라면 짝이 없는 7 을 return 하면 되는거지.
 
 ## 코드
 
- - 입력 : A (array consisting of $N$ integer), K (the number of CyclicRotation)
-   + N and K are integers within the range [0, ..., 100]
- - 출력 : B (array, result of $K$ CyclicRotations)
+ - 입력 : A (array consisting of N odd numbers)
+ - 출력 : One element that is left unpaired (integer)
 
-이 문제를 처음 보았을 때, 같은 action 을 주어진 $K$ 만큼 수행하니까 다음의 반복문을 사용해서 풀었어.
-
-```python
-def solution(A,K):
-    for i in range(K):
-        # Array 맨 뒤 element 를 맨 앞으로, 나머지를 한칸씩 뒤로
-        A = [A[-1]] + A[:-1]
-        # K 번 반복
-    return A
-```
-
-위의 코드로 87 점을 받게 되었는데, 이유는 A = [] 인 경우에 문제가 생기는 거였어. 이 부분과 for 문이 $K$ 에 비례해서 반복되는 부분을 수정해보았어.
-
-## 코드 수정
+일단 A 를 순회하면서 element 들의 count 를 세고, count 가 홀수인 element 를 return 하는 방식으로 풀었어.
 
 ```python
-def solution(A, K):
-    # A = [] 인 경우, A 를 return
-    if len(A) == 0:
-        return A
-    # A != [] 인 경우
+def solution(A):
+    count = dict()
     
-    K = K % len(A)  
-    # K <- K 를 len(A) 로 나눈 나머지
-    
-    # A의 (len(A)-K) 번째부터 끝까지 + A의 (len(A)-K-1) 번째 까지
-    return A[(len(A)-K):] + A[:(len(A)-K)]
+    # element 를 key, count 를 value 로 생성
+    for i in A:
+        count[i] = count.get(i,0) + 1
+    # count 가 홀수인 경우, 해당 element 를 return
+    for key, value in count.items():
+        if value % 2 == 1:
+            return key
 ```
 
-위 코드 설명은 아래와 같아.
+코드 설명은 다음과 같아.
 
- 1. A = [] 을 받으면 그대로 return A
- 2. A!= [] 인 경우, K 를 A 의 길이로 나눈 나머지만큼만 CyclicRotation 하면 됩니다.
- 3. $K <- K \% len(A)$ 를 넣고
- 4. A의 (len(A)-K) 번째부터 끝까지 + A의 (len(A)-K-1) 번째 까지로 list 만들어서 return 합니다.
+ 1. A를 받으면, 각 element의 count를 저장할 dictionary를 만듭니다.
+ 2. A를 순회하면서, element 값을 key로 count를 value로 저장합니다.
+ 3. 만들어진 dictionary에서 value가 홀수인 key를 반환합니다.
 
-## 예시
+코드 time complexity : O(N) or O(N logN)
 
- 1. A = [5, 1, 2, 4, 1], K = 12 인 경우,
- 2. K = 12 % 5 = 2
- 3. A[(len(A)-K):] + A[:(len(A)-K)] = A[3:] + A[:3] = [4, 1] + [5, 1, 2]
- 4. [4, 1, 5, 1, 2] 를 return
+## 참고 코드
 
-
+문제를 XOR 연산으로 푼 코드가 있어서 소개하도록 할께.
 
 ```python
 from functools import reduce
 
 def solution(A):
+    # A를 순회하면서 XOR 연산을 수행
     return reduce(lambda x,y: x^y, A)
 ```
 
-```python
-# O(N) or O(N*log(N))
-def solution(A):
-    count = dict()
-    
-    for i in A:
-        count[i] = count.get(i,0) + 1
-    
-    for key, value in count.items():
-        if value % 2 == 1:
-            return key
+XOR 연산은 연산 순서에 관계 없으므로 코드를 수행하면, 짝이 있는 element는 0 이 되고 결과적으로 짝이 없는 element만 남게 되는거지.
 
-```
+코드 time complexity : O(N) or O(N logN)
