@@ -8,7 +8,8 @@ tag: ["Python","Codility","Algorithm"]
 
 ## 문제
 
- - 목적 : "Rotation an array to the right by a given number of steps."
+ - 목적 : "Find value that occurs in odd number of elements."
+
 
 CyclicRotation 문제는 주어진 Array 에 대해, element 들을 한칸씩 뒤로 옮기는 문제야.
 
