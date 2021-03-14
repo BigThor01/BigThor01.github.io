@@ -7,7 +7,7 @@ tag: ["Python", "Codility", "Algorithm"]
 
 ## 문제
 
- - 목적 : "Minimize the value |(A[0] + ... + A[P-1]) - (A[P] + ... + A[N-1])|."
+ - 목적 : "Minimize the value \|(A[0] + ... + A[P-1]) - (A[P] + ... + A[N-1])\|."
 
 TapeEquilibrium 문제는 길이 N 의 array A 가 주어질 때, 어느 분기점에서 양쪽의 합의 차이가 가장 작은지를 구하는 문제야.
 
@@ -25,7 +25,7 @@ TapeEquilibrium 문제는 길이 N 의 array A 가 주어질 때, 어느 분기�
 ## 코드
 
  - 입력 : A (array consisting of N integers)
- - 출력 : Integer (Minimum value of |(A[0]+...+A[P-1]) - (A[P]+...+A[N-1])|)
+ - 출력 : Integer (Minimum value of \|(A[0]+...+A[P-1]) - (A[P]+...+A[N-1])\|)
 
 
 분기점 P 에 대해서 좌/우 합을 반복적으로 구하면 연산량이 O(N^2) 으로 비효율적이야.
