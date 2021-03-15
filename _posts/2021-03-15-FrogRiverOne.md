@@ -19,25 +19,21 @@ FrogRiverOne 문제는 개구리가 강을 건널 수 있는 최소 시간을 �
 
 예를들어, X = 5 이고 A = [1, 1, 3, 5, 2, 5, 4, 1, 3, 5] 인 경우, k = 6 이 되는 순간 1~5 까지가 모두 나오므로 6 을 return 해야해.
 
+단, A 에 1 ~ X 중 하나라도 들어있지 않으면 -1 을 return 한다.
+
 ## 코드
 
  - 입력 : X (Integer), A (array whose elements is in the range [1..X])
  - 출력 : Integer(The earliest time when a frog can jump to the other side of a river)
  
+```python
 
+```
 
  - 코드 time complexity : O(N)
 
 
 ## 더 느린 코드
 
-```python
-def solution(A):
-    dif = []
-    for i in range(1, len(A)-1):
-        dif.append(abs(sum(A[:i]) - sum(A[i:])))
-    
-    return min(dif)
-```
 
  - 코드 time complexity : O(N^2)
