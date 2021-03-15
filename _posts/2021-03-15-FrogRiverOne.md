@@ -25,15 +25,28 @@ FrogRiverOne 문제는 개구리가 강을 건널 수 있는 최소 시간을 �
 
  - 입력 : X (Integer), A (array whose elements is in the range [1..X])
  - 출력 : Integer(The earliest time when a frog can jump to the other side of a river)
- 
-```python
 
+A 를 돌면서 나온 value 를 key 로 저장하고, 중간에 key 가 1~X 까지 찬 순간 index 를 return 한다.
+
+만약 끝까지 멈추지 않는다면, -1 을 return 한다.
+
+```python
+def solution(X,A):
+    
+    # A를 돌면서 나오는 element를 세면서 count를 하는 dict.
+    counts = dict()
+    
+    # A 를 돌면서 넣자.
+    for index, value in enumerate(A):
+        # 나온 position 값을 key 롤 넣는다.
+        counts[value] = counts.get(value,1)
+        # 만약 중간에 counts 의 key 개수가 X 가 되는 순간 index 를 return
+        if len(counts.keys()) == X:
+            return index
+    
+    # for 문을 벗어나면, 나온 것들을 -1 로 return.
+    return -1
 ```
 
  - 코드 time complexity : O(N)
 
-
-## 더 느린 코드
-
-
- - 코드 time complexity : O(N^2)
