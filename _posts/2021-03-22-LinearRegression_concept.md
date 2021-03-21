@@ -59,9 +59,6 @@ $y = \hat{\beta_0} +\hat{\beta_1} (\hat{\gamma_0} +\hat{\gamma_2} x_2 + \hat{\ga
 
 그럼 위의 $y$ 는 다음과 같이 정리될 수 있어요.
 
-<a href="https://i.imgur.com/UO84mSm"><img src="https://i.imgur.com/UO84mSm.jpg" width="300px" title="source: imgur.com" /></a>
-
-
 $y =  (\hat{\beta_0} + \hat{\beta_1}\hat{\gamma_0}) 1 +\hat{\beta_1} \hat{\v} + \hat{\epsilon'}...(4)$
 
 뒤에 $\hat{\epsilon'}$ 은 식 (3)에서 $x_2, x_3, \hat{\epsilon}$ 으로 이루어진 부분을 표시한 거에요.
@@ -71,5 +68,10 @@ $y =  (\hat{\beta_0} + \hat{\beta_1}\hat{\gamma_0}) 1 +\hat{\beta_1} \hat{\v} + 
 일단 여기까지 왔으면 자세한 풀이는 아래와 같아요.
 
 
+<a href="https://i.imgur.com/UO84mSm"><img src="https://i.imgur.com/UO84mSm.jpg" width="300px" title="source: imgur.com" /></a>
 
+$\hat{\alpha_1} = \hat{\beta_1}$ 인 이유는 위와 같이 수식으로 확인할 수 있고, 실제로 분석을 실행해보아도 같은 결과를 얻을 수 있어요.
 
+### 문제 A.3.
+
+문제 A.2. 와 비슷하게 풀 수 있어요.
