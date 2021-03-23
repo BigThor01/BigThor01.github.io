@@ -42,3 +42,11 @@ Q. Positive/Negative 예제는 각각 일정 반경 $r$ 로 공을 던질 수 �
 
 우리는 여러 가능한 도로 중에서 던진 공이 중앙선을 넘지 않으면서 $r$ 을 가장 크게 할 수 있는 도로를 찾고 싶습니다. 어떻게 하면 될까요?
 ```
+
+위 문제의 해답이 곧 두 예제를 가장 잘 구분하는 직선을 찾는 것과 동일하며, 조금만 생각해보면 두 예제 사이에 가장 넓은 도로를 만드는 것이 해답이 됩니다.
+
+<a href="https://i.imgur.com/DEQnd8e"><img src="https://i.imgur.com/DEQnd8e.png" width="300px" title="source: imgur.com" />
+<img src="https://i.imgur.com/phOxumi.png" width="300px" title="source: imgur.com" /></a>
+
+<a href="https://i.imgur.com/phOxumi"><img src="https://i.imgur.com/phOxumi.png" width="300px" title="source: imgur.com" /></a>
+
