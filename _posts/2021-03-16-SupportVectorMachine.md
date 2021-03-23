@@ -94,7 +94,7 @@ Positive/Negative 를 가로지르는 여러 도로들은 각각 대응되는 $w
 
  1. 길이 두 예제 사이에 있어야되니까 다음을 만족해야합니다.
    + $w^\intercal x_+ + b \geq 1$, $x_+$ 는 positive 예제
-   + $w^\intercal x_- + b \leq -1$, $x_-$ 는 negative 예제\\
+   + $w^\intercal x_- + b \leq -1$, $x_-$ 는 negative 예제<br/>
 
  2. 1을 만족하는 길 중에서 $||w||$ 를 가장 minimize 하는 $w$ 를 찾아야합니다. 이유는
    + $w^\intercal x_2 + b = 1$, $w^\intercal x_1 + b = -1$ 인 $x_1, x_2$ 가 있을 때
