@@ -93,7 +93,7 @@ Positive/Negative 를 가로지르는 여러 도로들은 각각 대응되는 $w
    + $w^\intercal x_- + b \leq -1$, $x_-$ 는 negative 예제
 
  2. 1을 만족하는 길 중에서 $||w||$ 를 가장 minimize 하는 $w$ 를 찾아야합니다. 이유는
-   <a href="https://i.imgur.com/DEQnd8e"><img src="https://i.imgur.com/0prPFaQ.png" width="300px" title="source: imgur.com" /></a>
+   + <a href="https://i.imgur.com/DEQnd8e"><img src="https://i.imgur.com/0prPFaQ.png" width="300px" title="source: imgur.com" /></a>
    + $w^\intercal x_2 + b = 1$, $w^\intercal x_1 + b = -1$ 인 $x_1, x_2$ 가 있을 때
    + 길의 너비는 $\frac{w^\intercal (x_2 - x_1)}{\|\|w\|\|} =\frac{2}{\|\|w\|\|}$ 이므로
    + 너비는 $\|\|w\|\|$ 와 반비례
