@@ -49,8 +49,7 @@ Q. Positive/Negative 예제는 각각 일정 반경 r 로 공을 던질 수 있�
 
 위 문제의 해답이 곧 두 예제를 가장 잘 구분하는 직선을 찾는 것과 동일하며, 조금만 생각해보면 두 예제 사이에 가장 넓은 도로를 만드는 것이 해답이 됩니다.
 
-<a href="https://i.imgur.com/DEQnd8e"><img src="https://i.imgur.com/DEQnd8e.png" width="300px" title="source: imgur.com" />
-<img src="https://i.imgur.com/phOxumi.png" width="300px" title="source: imgur.com" /></a>
+<a href="https://i.imgur.com/DEQnd8e"><img src="https://i.imgur.com/DEQnd8e.png" width="300px" title="source: imgur.com" /><img src="https://i.imgur.com/phOxumi.png" width="300px" title="source: imgur.com" /></a>
 
 위의 두 그림을 보면, 가장 넓은 길을 찾는 경우 다른 길보다 더 큰 반경 $r$ 로 공을 던질 수 있죠.
 
@@ -74,7 +73,7 @@ Positive/Negative 를 가로지르는 여러 도로들은 각각 대응되는 $w
 
 그럼 부등식을 활용해서, positive/negative 예제 사이에서 가장 넓은 길(widest street)을 찾아볼까요? 이는 다음을 만족하는 $w, b$ 를 찾는 것과 같아요.
 
-$\argmin_{(w,b)} \|\|w\|\|$\\
+$\min_{(w,b)} \|\|w\|\|$\\
 subject to $w^\intercal x_+ + b \geq 1$ & $w^\intercal x_- + b \leq -1$, $x_+, x_-$ 는 각각 positive, negative 예제
 
 
