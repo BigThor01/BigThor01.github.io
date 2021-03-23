@@ -85,7 +85,7 @@ Vapnik 교수님은 두 예제 사이에 가장 넓은 길(widest street)을 찾
  - $-1 < w^\intercal x + b < 1$, $w,b$ 는 길에 대응되는 unique 한 value.
 
 <p align="center">
-<a href="https://i.imgur.com/DEQnd8e"><img src="https://i.imgur.com/nBHH3rd.png" width="300px" title="source: imgur.com" /></a>_@ 임의의 street_
+<a href="https://i.imgur.com/DEQnd8e"><img src="https://i.imgur.com/nBHH3rd.png" width="300px" title="source: imgur.com" /></a>@ 임의의 street
 </p>
 
 Positive/Negative 를 가로지르는 여러 도로들은 각각 대응되는 $w, b$ 에 의해 $-1 < w^\intercal x + b < 1$ 으로 표현 됩니다.
