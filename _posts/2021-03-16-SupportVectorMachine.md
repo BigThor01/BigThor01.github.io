@@ -22,7 +22,9 @@ Patrick Winston 교수님의 MIT 6.034 Artificial Intelligence(Fall 2010) 강의
 
 Positive/Negative 예제가 있는 이런 공간을 생각해볼까요. 
 
+<p align="center">
 <a href="https://i.imgur.com/IOUkS5H"><img src="https://i.imgur.com/IOUkS5H.png" width="300px" title="source: imgur.com" /></a>
+</p>
 
 Nearest neighborhood / tree / Neural network 를 사용하면 아래와 같이 boundary를 그을 수 있어요.
 
@@ -82,7 +84,9 @@ Vapnik 교수님은 두 예제 사이에 가장 넓은 길(widest street)을 찾
 
  - $-1 < w^\intercal x + b < 1$, $w,b$ 는 길에 대응되는 unique 한 value.
 
+<p align="center">
 <a href="https://i.imgur.com/DEQnd8e"><img src="https://i.imgur.com/nBHH3rd.png" width="300px" title="source: imgur.com" /></a>_@ 임의의 street_
+</p>
 
 Positive/Negative 를 가로지르는 여러 도로들은 각각 대응되는 $w, b$ 에 의해 $-1 < w^\intercal x + b < 1$ 으로 표현 됩니다.
 
@@ -97,5 +101,7 @@ Positive/Negative 를 가로지르는 여러 도로들은 각각 대응되는 $w
    + 길의 너비는 $\frac{w^\intercal (x_2 - x_1)}{\|\|w\|\|} =\frac{2}{\|\|w\|\|}$ 이므로
    + 너비는 $\|\|w\|\|$ 와 반비례
 
+<p align="center">
 <a href="https://i.imgur.com/DEQnd8e"><img src="https://i.imgur.com/0prPFaQ.png" width="300px" title="source: imgur.com" /></a>
+</p>
 
