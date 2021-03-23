@@ -42,7 +42,7 @@ Nearest neighborhood / tree / Neural network 를 사용하면 아래와 같이 b
  
  
 <a href="https://i.imgur.com/iqEJ6T3">
-  <img src="https://i.imgur.com/iqEJ6T3.png" width="300px" title="source: imgur.com" /><img src="https://i.imgur.com/GmMx2Fp.png" width="300px" title="source: imgur.com" /><img src="https://i.imgur.com/kQpk0Cg.png" width="300px" title="source: imgur.com" />
+  <img src="https://i.imgur.com/iqEJ6T3.png" width="300px" title="source: imgur.com"><img src="https://i.imgur.com/GmMx2Fp.png" width="300px" title="source: imgur.com"><img src="https://i.imgur.com/kQpk0Cg.png" width="300px" title="source: imgur.com" />
 </a>
 
 Vapnik 교수님은 문제를 새로운 방식으로 접근했어요. 일단 문제를 Positive/Negative 예제를 나누기 위해 어떤 직선을 그을 것인가 라는 것으로 제한했어요.
