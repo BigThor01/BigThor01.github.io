@@ -26,12 +26,11 @@ Positive/Negative 예제가 있는 이런 공간을 생각해볼까요.
 
 Nearest neighborhood / tree / Neural network 를 사용하면 아래와 같이 boundary를 그을 수 있어요.
 
-
 <table>
   <tr>
-    <td>First Screen Page</td>
-     <td>Holiday Mention</td>
-     <td>Present day in purple and selected day in pink</td>
+    <td>Nearest neighborhood</td>
+     <td>Tree</td>
+     <td>Neural network</td>
   </tr>
   <tr>
     <td><img src="https://i.imgur.com/iqEJ6T3.png" width="300px" title="source: imgur.com"></td>
@@ -40,10 +39,6 @@ Nearest neighborhood / tree / Neural network 를 사용하면 아래와 같이 b
   </tr>
  </table>
  
- 
-<a href="https://i.imgur.com/iqEJ6T3">
-  <img src="https://i.imgur.com/iqEJ6T3.png" width="200px" title="source: imgur.com"><img src="https://i.imgur.com/GmMx2Fp.png" width="200px" title="source: imgur.com"><img src="https://i.imgur.com/kQpk0Cg.png" width="200px" title="source: imgur.com" />
-</a>
 
 Vapnik 교수님은 문제를 새로운 방식으로 접근했어요. 일단 문제를 Positive/Negative 예제를 나누기 위해 어떤 직선을 그을 것인가 라는 것으로 제한했어요.
 
@@ -64,7 +59,12 @@ Q. Positive/Negative 예제는 각각 일정 반경 r 로 공을 던질 수 있�
 
 위 문제의 해답이 곧 두 예제를 가장 잘 구분하는 직선을 찾는 것과 동일하며, 조금만 생각해보면 두 예제 사이에 가장 넓은 도로를 만드는 것이 해답이 됩니다.
 
-<a href="https://i.imgur.com/DEQnd8e"><img src="https://i.imgur.com/DEQnd8e.png" width="300px" title="source: imgur.com" /><img src="https://i.imgur.com/phOxumi.png" width="300px" title="source: imgur.com" /></a>
+<table>
+  <tr>
+    <td><img src="https://i.imgur.com/DEQnd8e.png" width="300px"></td>
+    <td><img src="https://i.imgur.com/phOxumi.png" width="300px"></td>
+  </tr>
+ </table>
 
 위의 두 그림을 보면, 가장 넓은 길을 찾는 경우 다른 길보다 더 큰 반경 $r$ 로 공을 던질 수 있죠.
 
