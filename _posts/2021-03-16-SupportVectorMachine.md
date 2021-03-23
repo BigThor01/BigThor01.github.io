@@ -22,9 +22,14 @@ Patrick Winston 교수님의 MIT 6.034 Artificial Intelligence(Fall 2010) 강의
 
 Positive/Negative 예제가 있는 이런 공간을 생각해볼까요. 
 
-Nearest neighborhood / tree / Neural net 등은 각각 방법으로 이런 예제를 나눌 수 있어요.
+<a href="https://i.imgur.com/IOUkS5H"><img src="https://i.imgur.com/IOUkS5H.png" width="300px" title="source: imgur.com" /></a>
 
-이건 나중에 그림으로 살펴보자.
+Nearest neighborhood / tree / Neural network 를 사용하면 아래와 같이 boundary를 그을 수 있어요.
+
+<a href="https://i.imgur.com/iqEJ6T3"><img src="https://i.imgur.com/iqEJ6T3.png" width="300px" title="source: imgur.com" />
+<img src="https://i.imgur.com/GmMx2Fp.png" width="300px" title="source: imgur.com" />
+<img src="https://i.imgur.com/kQpk0Cg.png" width="300px" title="source: imgur.com" />
+</a>
 
 Vapnik 교수님은 문제를 새로운 방식으로 접근했어요. 일단 문제를 Positive/Negative 예제를 나누기 위해 어떤 직선을 그을 것인가 라는 것으로 제한했어요.
 
@@ -48,5 +53,31 @@ Q. Positive/Negative 예제는 각각 일정 반경 $r$ 로 공을 던질 수 �
 <a href="https://i.imgur.com/DEQnd8e"><img src="https://i.imgur.com/DEQnd8e.png" width="300px" title="source: imgur.com" />
 <img src="https://i.imgur.com/phOxumi.png" width="300px" title="source: imgur.com" /></a>
 
-<a href="https://i.imgur.com/phOxumi"><img src="https://i.imgur.com/phOxumi.png" width="300px" title="source: imgur.com" /></a>
+위의 두 그림을 보면, 가장 넓은 길을 찾는 경우 다른 길보다 더 큰 반경 $r$ 로 공을 던질 수 있죠.
+
+Vapnik 교수님은 두 예제 사이에 가장 넓은 길(widest street)을 찾아서 그 중앙선을 boundary 로 사용하는 아이디어를 제안했어요.
+
+이 방법을 _Widest street approach_ 라고 부르죠.
+
+그럼 가장 넓은 길을 어떻게 찾을 수 있을까요?
+
+## Widest street 을 찾는 방법
+
+그럼 실제로 positive/negative 예제가 주어져있을 때 widest street 을 어떻게 찾을 수 있을까요?
+
+공간에 어떤 길이 있다면, 그 길은 어떤 부등식으로 표현 가능할꺼에요. 실제로 모든 길은 다음 부등식으로 표현할 수 있어요.
+
+ - $-1 < w^\intercal x + b < 1$, $w,b$ 는 길에 대응되는 unique 한 value.
+
+<a href="https://i.imgur.com/DEQnd8e"><img src="https://i.imgur.com/nBHH3rd.png" width="300px" title="source: imgur.com" /></a>_@ 임의의 street_
+
+Positive/Negative 를 가로지르는 여러 도로들은 각각 대응되는 $w, b$ 에 의해 $-1 < w^\intercal x + b < 1$ 으로 표현 됩니다.
+
+그럼 부등식을 활용해서, positive/negative 예제 사이에서 가장 넓은 길(widest street)을 찾아볼까요? 이는 다음을 만족하는 $w, b$ 를 찾는 것과 같아요.
+
+```
+ $\argmin_{(w,b)} \|\|w\|\| 
+ subject to $w^\intercal x_+ + b \geq 1$ & $w^\intercal x_- + b \leq -1$, $x_+, x_-$ 는 각각 positive, negative 예제
+```
+
 
