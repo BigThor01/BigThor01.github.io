@@ -26,6 +26,21 @@ Positive/Negative 예제가 있는 이런 공간을 생각해볼까요.
 
 Nearest neighborhood / tree / Neural network 를 사용하면 아래와 같이 boundary를 그을 수 있어요.
 
+
+<table>
+  <tr>
+    <td>First Screen Page</td>
+     <td>Holiday Mention</td>
+     <td>Present day in purple and selected day in pink</td>
+  </tr>
+  <tr>
+    <td><img src="https://i.imgur.com/iqEJ6T3.png" width="300px" title="source: imgur.com"></td>
+    <td><img src="https://i.imgur.com/GmMx2Fp.png" width="300px" title="source: imgur.com"></td>
+    <td><img src="https://i.imgur.com/kQpk0Cg.png" width="300px" title="source: imgur.com"></td>
+  </tr>
+ </table>
+ 
+ 
 <a href="https://i.imgur.com/iqEJ6T3">
   <img src="https://i.imgur.com/iqEJ6T3.png" width="300px" title="source: imgur.com" /><img src="https://i.imgur.com/GmMx2Fp.png" width="300px" title="source: imgur.com" /><img src="https://i.imgur.com/kQpk0Cg.png" width="300px" title="source: imgur.com" />
 </a>
