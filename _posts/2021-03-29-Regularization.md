@@ -26,7 +26,7 @@ Overfitting 완화/방지를 위해 training example 확보, feature selection, 
 
 10개의 training example 에 대한 polynomial regression 을 생각해볼까요. 밑에 데이터는 $y = 2 \sin (1.5x) + \epsilon$ 으로 생성하였고 파란선은 underlying true model 이에요.
 
-<코드로 구한 비교 그림>
+코드로 구한 비교 그림
 
 Polynomial order 가 증가할수록 training data 에 대한 error 는 감소하는 것을 알 수 있어요. 
 
@@ -52,7 +52,7 @@ Coefficient 가 0 에 가까우면 사실 해당 term 이 갖는 effect 는 아�
 
  - **Data 에 fit 시키되, coefficient magnitude 를 제한해서 덜 flexible 하게 만든다.**
  
-<코드로 구한 비교 그림>
+코드로 구한 비교 그림
 
 ## $L_p$ regularization
 
@@ -87,7 +87,7 @@ Penalty term 은 data 와 무관하게, 0 에서 멀어질수록 커지게 되�
  - $\lambda$ 증가 : data의 영향력은 줄고, $\beta$는 0에 가까워짐 $rightarrow$ data에 따른 variability 감소, bias 증가.
  - $\lambda$ 감소 : data의 영향력은 늘고, $\beta$는 OLS에 가까워짐 $rightarrow$ data에 따른 variability 증가, bias 감소.
  
-<그림 : lambda에 따른 차이 그림>
+그림 : lambda에 따른 차이 그림
 
 ---
 ## (참고) $L_p$ norm 이 어떻게 생겼을까?
