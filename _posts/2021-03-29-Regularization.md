@@ -42,13 +42,11 @@ Polynomial order 가 증가할수록 training data 에 대한 error 는 감소�
 
 위의 예시에서 order 를 10으로 하는 경우, 어떤 10개 data 가 들어와도 error 가 0인 매우 flexible 한 모형이 됩니다.
 
-얘를 덜 flexible 하게 만들려면 어떻게 해야할까요? 여러 방법 중 한가지 방법은 **coefficient 를 0 가까이 묶어두는 방법**이 있어요.
+얘를 덜 flexible 하게 만들려면 어떻게 해야할까요? 여러 방법 중 한가지 방법은 **coefficient 의 범위를 0 근처의 영역으로 묶어두는 방법**이 있어요.
 
-Coefficient 가 0 에 가까우면 사실 해당 term 이 갖는 effect 는 아주 작을꺼에요. $x$ 가 많이 변해도 해당 term 은 무시할 정도로 조금 변하게 됩니다.
+Data가 어떻게 들어오든, coefficient 가 움직이는 범위는 0 근처의 제한된 영역이므로 coefficient 변동은 줄어들고 모델은 덜 flexible 해지는 거죠.
 
-**즉, coefficient 의 magnitude 를 아주 작게 조정하면 해당 term 이 모형에 반영되는 정도는 아주 작아져요.**
-
-Data 가 어떻게 들어오든 coefficient 가 움직이는 범위는 0 근처이므로, 모델은 덜 flexible 해지는 거죠. 이것이 바로 regularization 의 아이디어 입니다.
+이것이 바로 regularization 의 아이디어 입니다.
 
  - **Data 에 fit 시키되, coefficient magnitude 를 제한해서 덜 flexible 하게 만든다.**
  
