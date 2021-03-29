@@ -45,7 +45,7 @@ Polynomial order 가 증가할수록 training data 에 대한 error 는 감소�
 얘를 덜 flexible 하게 만들려면 어떻게 해야할까요? 여러 방법 중 한가지 방법은 **coefficient 의 범위를 0 근처의 영역으로 묶어두는 방법**이 있어요.
 
 Data가 어떻게 들어오든, coefficient 가 움직이는 범위는 0 근처의 제한된 영역이므로 coefficient 변동은 줄어들게
-되죠. 심지어 어떤 coefficient 는 거의 0 이 되어서 모델에 영향을 주지 않게 되기도 하구요.
+되죠. 심지어 어떤 coefficient 는 거의 0 이 되어서 모델에 영향을 주지 않게 되기도 하고요.
 
 결과적으로 모델은 덜 flexible 해지는 거죠. 이것이 바로 regularization 의 아이디어 입니다.
 
