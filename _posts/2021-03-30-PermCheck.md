@@ -38,7 +38,7 @@ def solution(A):
             value += 1
             continue
         else:
-            # value < i 라면 return 0
+            # value != i 라면 return 0
             return 0
     # A를 다 순회하면 return 1
     return 1
@@ -52,7 +52,7 @@ def solution(A):
    - i  == value 라면
      + value에 1 더해서 update 합니다.
      + 다음 순회를 진행합니다.
-   - i > value 라면
+   - i != value 라면
      + 0을 return 합니다.
  4. 끝까지 순회하면 1을 return 합니다.
 
