@@ -1,10 +1,8 @@
-
 ---
 title: "[Codility] Lesson04 - Counting Elements(MissingInteger)"
 category: Algorithm
 tag: ["Python", "Codility", "Algorithm"]
 ---
-
 오늘은 Codility 사이트 Lesson4. Counting Elements 에 있는 MissingInteger 문제를 풀어볼께요.
 
 ## 문제
