@@ -1,5 +1,3 @@
-
-
 ---
 title: "[Codility] Lesson04 - Counting Elements(PermCheck)"
 category: Algorithm
