@@ -50,10 +50,10 @@ def solution(A):
  2. value는 아직 나오지 않은 가장 작은 자연수를 넣는 변수입니다.
  3. i는 A를 순회합니다.
    - i  == value 라면
-     + value에 1 더해서 update 합니다.
-     + 다음 순회를 진행합니다.
+       + value에 1 더해서 update 합니다.
+       + 다음 순회를 진행합니다.
    - i != value 라면
-     + 0을 return 합니다.
+       + 0을 return 합니다.
  4. 끝까지 순회하면 1을 return 합니다.
 
 
