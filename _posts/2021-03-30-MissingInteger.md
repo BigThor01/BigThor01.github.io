@@ -53,8 +53,8 @@ def solution(A):
  - i는 A를 순회합니다.
  - i <= 0 이라면 계속 순회합니자.
  - i가 자연수라면
-  + result = i 인 경우, result를 1 더해서 update 합니다.
-  + result < i 인 경우, result를 return 합니다.
+   + result = i 인 경우, result를 1 더해서 update 합니다.
+   + result < i 인 경우, result를 return 합니다.
 
 
  - 코드 time complexity : O(N) or O(N log N)
