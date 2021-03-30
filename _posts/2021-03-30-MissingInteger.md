@@ -51,7 +51,7 @@ def solution(A):
  1. A를 sorting 합니다.
  2. result는 아직 나오지 않은 가장 작은 자연수를 넣는 변수입니다.
  3. i는 A를 순회합니다.
- 4. i <= 0 이라면 계속 순회합니자.
+ 4. i <= 0 이라면 계속 순회합니다.
  5. i가 자연수라면
    + result = i 인 경우, result를 1 더해서 update 합니다.
    + result < i 인 경우, result를 return 합니다.
