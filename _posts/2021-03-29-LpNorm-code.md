@@ -34,10 +34,5 @@ plt.show()
 ```
 
 
-![png](2021-03-29-LpNorm-code_files/2021-03-29-LpNorm-code_4_0.png)
+![png](images/2021-03-29-LpNorm-code_files/2021-03-29-LpNorm-code_4_0.png)
 
-
-
-```python
-
-```
