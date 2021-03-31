@@ -24,11 +24,15 @@ Overfitting 완화/방지를 위해 training example 확보, feature selection, 
 
 모델이 flexible 할수록 training data 에 대한 reconstruction error 는 점점 줄어들게 됩니다. 반대로 모델이 덜 flexible 할수록 training data 에 대한 error 는 증가하게 되죠.
 
-10개의 training example 에 대한 polynomial regression 을 생각해볼까요. 밑에 데이터는 $y = 2 \sin (1.5x) + \epsilon$ 으로 생성하였고 파란선은 underlying true model 이에요.
+15개의 training example 에 대한 polynomial regression 을 생각해볼까요. 15개 point 는 $y = 2 \sin (1.5x) + \epsilon$ 으로 생성하였고 파란선은 underlying true model 이에요.
 
-코드로 구한 비교 그림
+![png](images/2021-03-29-Regularization-code_files/2021-03-29-Regularization-code_8_0.png)
 
-Polynomial order 가 증가할수록 training data 에 대한 error 는 감소하는 것을 알 수 있어요. 
+해당 데이터로 polynomial regresson 을 적합하면 다음의 fit 을 얻을 수 있어요.
+
+![png](images/2021-03-29-Regularization-code_files/2021-03-29-Regularization-code_10_0.png)
+
+우리는 위의 그림에서 polynomial order 가 증가할수록 training data 에 대한 error 는 감소하는 것을 확인할 수 있어요. 
 
 하지만 이는 마냥 좋은 것은 아닙니다. 바로 overfitting 이 일어났기 때문이에요. 모델이 flexible 해지면 underlying true model 에 가까워지지만 어느 순간부터 data 의 random error 까지 학습하는거죠.
 
@@ -40,18 +44,15 @@ Polynomial order 가 증가할수록 training data 에 대한 error 는 감소�
 
 ## Coefficient magnitude 와 flexibility
 
-위의 예시에서 order 를 10으로 하는 경우, 어떤 10개 data 가 들어와도 error 가 0인 매우 flexible 한 모형이 됩니다.
+위의 예시에서 만약 order 를 15으로 하는 경우, 어떤 15개 data 가 들어와도 error 가 0인 매우 flexible 한 모형이 됩니다.
 
 얘를 덜 flexible 하게 만들려면 어떻게 해야할까요? 여러 방법 중 한가지 방법은 **coefficient 의 범위를 0 근처의 영역으로 묶어두는 방법**이 있어요.
 
-Data가 어떻게 들어오든, coefficient 가 움직이는 범위는 0 근처의 제한된 영역이므로 coefficient 변동은 줄어들게
-되죠. 심지어 어떤 coefficient 는 거의 0 이 되어서 모델에 영향을 주지 않게 되기도 하고요.
+Data가 어떻게 들어오든, coefficient 가 움직이는 범위는 0 근처의 제한된 영역이므로 coefficient 변동은 줄어들게 되죠. 심지어 어떤 coefficient 는 거의 0 이 되어서 모델에 영향을 주지 않게 되기도 하고요.
 
 결과적으로 모델은 덜 flexible 해지는 거죠. 이것이 바로 regularization 의 아이디어 입니다.
 
  - **Data 에 fit 시키되, coefficient magnitude 를 제한해서 덜 flexible 하게 만든다.**
- 
-코드로 구한 비교 그림
 
 ## $L_p$ regularization
 
@@ -76,6 +77,11 @@ $p$ 에 따라 모양은 다르겠지만 모두 0 주위의 영역으로 coeffic
 따라서 우리가 찾고자 하는 solution 은 다음 식을 풀어서 나오게 됩니다.
 
  - $\min_\beta reconstruction\ error\ +\ penalty$ ... 식(3)
+
+실제로 이전의 예시에서 polynomial regression 을 penalty 를 이용해서 적합하면 다음의 fit 을 확인할 수 있어요. Order 가 증가해도 이전에 비해 안정적인 fit 을 얻는 것을 볼 수 있죠.
+
+![png](images/2021-03-29-Regularization-code_files/2021-03-29-Regularization-code_14_0.png)
+
 
 ## $\lambda$ 에 따라서 shrink 정도가 결정됩니다.
 
