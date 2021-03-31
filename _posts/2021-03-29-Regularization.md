@@ -26,11 +26,15 @@ Overfitting 완화/방지를 위해 training example 확보, feature selection, 
 
 15개의 training example 에 대한 polynomial regression 을 생각해볼까요. 15개 point 는 $y = 2 \sin (1.5x) + \epsilon$ 으로 생성하였고 파란선은 underlying true model 이에요.
 
-![png](images/2021-03-29-Regularization-code_files/2021-03-29-Regularization-code_8_0.png)
+<p align="center">
+<a href="https://i.imgur.com/IOUkS5H"><img src="https://i.imgur.com/ULMF4PS.png" width="300px" title="source: imgur.com" /></a>
+</p>
 
 해당 데이터로 polynomial regresson 을 적합하면 다음의 fit 을 얻을 수 있어요.
 
-![png](images/2021-03-29-Regularization-code_files/2021-03-29-Regularization-code_10_0.png)
+<p align="center">
+<a href="https://i.imgur.com/IOUkS5H"><img src="https://i.imgur.com/x8Onw77.png" width="500px" title="source: imgur.com" /></a>
+</p>
 
 우리는 위의 그림에서 polynomial order 가 증가할수록 training data 에 대한 error 는 감소하는 것을 확인할 수 있어요. 
 
@@ -80,8 +84,9 @@ $p$ 에 따라 모양은 다르겠지만 모두 0 주위의 영역으로 coeffic
 
 실제로 이전의 예시에서 polynomial regression 을 penalty 를 이용해서 적합하면 다음의 fit 을 확인할 수 있어요. Order 가 증가해도 이전에 비해 안정적인 fit 을 얻는 것을 볼 수 있죠.
 
-![png](images/2021-03-29-Regularization-code_files/2021-03-29-Regularization-code_14_0.png)
-
+<p align="center">
+<a href="https://i.imgur.com/IOUkS5H"><img src="https://i.imgur.com/22AqlVL.png" width="500px" title="source: imgur.com" /></a>
+</p>
 
 ## $\lambda$ 에 따라서 shrink 정도가 결정됩니다.
 
