@@ -86,7 +86,7 @@ plt.show()
 ```
 
 
-![png](2021-03-29-Regularization-code_files/2021-03-29-Regularization-code_8_0.png)
+![png](images/2021-03-29-Regularization-code_files/2021-03-29-Regularization-code_8_0.png)
 
 
 ## Polynomial order 와 flexibility 확인
@@ -113,7 +113,7 @@ for row in axes:
 ```
 
 
-![png](2021-03-29-Regularization-code_files/2021-03-29-Regularization-code_10_0.png)
+![png](images/2021-03-29-Regularization-code_files/2021-03-29-Regularization-code_10_0.png)
 
 
 ## Penalized polynomial regression 함수 생성 (p = 2)
@@ -157,5 +157,5 @@ for row in axes:
 ```
 
 
-![png](2021-03-29-Regularization-code_files/2021-03-29-Regularization-code_14_0.png)
+![png](images/2021-03-29-Regularization-code_files/2021-03-29-Regularization-code_14_0.png)
 
