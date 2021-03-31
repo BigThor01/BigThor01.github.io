@@ -83,8 +83,8 @@ $p$ 에 따라 모양은 다르겠지만 모두 0 주위의 영역으로 coeffic
 
 Penalty term 은 data 와 무관하게, 0 에서 멀어질수록 커지게 되어요. $\lambda$ 는 penalty 가 반영되는 정도를 결정하기 때문에 그 값에 따라 다음 효과를 가져요.
 
- - $\lambda$ 증가 : data의 영향력은 줄고, $\beta$는 0에 가까워짐 $rightarrow$ data에 따른 variability 감소, bias 증가.
- - $\lambda$ 감소 : data의 영향력은 늘고, $\beta$는 OLS에 가까워짐 $rightarrow$ data에 따른 variability 증가, bias 감소.
+ - $\lambda$ 증가 : data의 영향력은 줄고, $\beta$는 0에 가까워짐 → data에 따른 variability 감소, bias 증가.
+ - $\lambda$ 감소 : data의 영향력은 늘고, $\beta$는 OLS에 가까워짐 → data에 따른 variability 증가, bias 감소.
  
 그림 : lambda에 따른 차이 그림
 
