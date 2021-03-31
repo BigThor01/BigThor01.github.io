@@ -98,7 +98,7 @@ Penalty term 은 data 와 무관하게, 0 에서 멀어질수록 커지게 되�
  - $\lambda$ 감소 : data의 영향력은 늘고, $\beta$는 OLS에 가까워짐 → data에 따른 variability 증가, bias 감소.
  
 <p align="center">
-<a href="https://i.imgur.com/IOUkS5H"><img src="https://i.imgur.com/PZJ4MB7.png" width="450px" title="source: imgur.com" /></a>
+<a href="https://i.imgur.com/IOUkS5H"><img src="https://i.imgur.com/PZJ4MB7.png" width="400px" title="source: imgur.com" /></a>
 </p>
 
 ---
