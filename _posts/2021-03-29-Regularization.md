@@ -112,7 +112,9 @@ $L_p$ norm 은 어떻게 생겼는지 추가적으로 알아볼까요?
 
  - $\|\|x\|\|_p = \big( \sum_i \|x\|^p \big)^{\frac{1}{p}}$
 
-그림
+<p align="center">
+<a href="https://i.imgur.com/IOUkS5H"><img src="https://i.imgur.com/Z4JX1Qj.png" width="500px" title="source: imgur.com" /></a>
+</p>
 
 위의 그림은 $p$ 가 $0, 1/2, 1, 2, 5, \infty$ 일 때, 등고선을 그려본 거에요. 확인할 수 있는 특징은 $p$가 커질수록 원점 근처의 사각별 모양에서 원, 그리고 사각형의 형태로 변한다는 거에요.
 
