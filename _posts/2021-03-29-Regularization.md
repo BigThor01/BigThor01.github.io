@@ -124,7 +124,7 @@ $p<1$ 인 경우에 non-convex 하기 때문에 optimization 이 어렵고, $p$ 
 
 Regularization 은 Bayesian estimation 과 밀접한 관계가 있어요.
 
-Bayesian 추정은 보통 parameter 의 사후 확률(posterior probability)을 가장 크게 하는 값을 추정량으로 사용하는  _MAP (Maximum a posteriori)_방법으로 수행됩니다.
+Bayesian 추정은 보통 parameter 의 사후 확률(posterior probability)을 가장 크게 하는 값을 추정량으로 사용하는  **MAP (Maximum a posteriori)** 방법으로 수행됩니다.
 
 이를 식으로 나타내면 다음과 같아요.
 
@@ -144,4 +144,4 @@ $= \log \alpha^k - \frac{1}{2\sigma^2}  \beta^\intercal  \beta$
 
 $\hat{\beta} =\text{arg} \min_\beta \big( -\log P(\text{data}\| \beta)+ \frac{1}{2\sigma^2} \|\|\beta\|\|_2^2 \big)$ ... 식(5)
 
-위 식은 $L_2$ regularization 과 동일함을 알 수 있어요. 추가적으로 사전 분포가 Laplacian 인 경우에는 $L_1$ regularization 과 동일하다는 것도 확인할 수 있어요.
+위 식은 $L_2$ regularization 과 동일함을 알 수 있어요. 추가적으로 사전 분포가 Laplacian 인 경우에는 $L_1$ regularization 과 동일하다는 사실도 보일 수 있어요.
