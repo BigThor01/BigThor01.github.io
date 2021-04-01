@@ -66,7 +66,7 @@ Data가 어떻게 들어오든, coefficient 가 움직이는 범위는 0 근처�
 
 즉, 기존의 목적함수에 다음 제약조건을 추가하는거죠. 
 
- - $\min_\beta\text{reconstruction error}$, sub to $\|\|\beta\|\|_p <= t$ ... 식(1)
+ - $\min_\beta\text{reconstruction error}$, sub to $\|\|\beta\|\|_p^p <= t$ ... 식(1)
 
 여기에서  $\|\|\beta\|\|_p$ 는 $L_p$ norm 으로, 식(1)을 이용해서 solution 을 구하는 방식을 $L_p$ regularization 이라 불러요.
 
@@ -74,9 +74,9 @@ $p$ 에 따라 모양은 다르겠지만 모두 0 주위의 영역으로 coeffic
 
 식(1)은 Lagrange multiplier 를 이용해서 다음 식으로 바꿀 수 있어요.
 
- - $\min_\beta \text{reconstruction error} +\ \lambda \|\|\beta\|\|_p$ ... 식(2)
+ - $\min_\beta \text{reconstruction error} +\ \lambda \|\|\beta\|\|_p^p$ ... 식(2)
 
-식(2)에서 $\lambda$ 는 tuning parameter, $\lambda \|\|\beta\|\|_p$ 는 penalty term 이라 불러요.
+식(2)에서 $\lambda$ 는 tuning parameter, $\lambda \|\|\beta\|\|_p^p$ 는 penalty term 이라 불러요.
 
 따라서 우리가 찾고자 하는 solution 은 다음 식을 풀어서 나오게 됩니다.
 
