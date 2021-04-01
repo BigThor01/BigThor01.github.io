@@ -122,3 +122,26 @@ $p<1$ 인 경우에 non-convex 하기 때문에 optimization 이 어렵고, $p$ 
 
 ## (참고) Maximum a Posteriori(MAP) 와 regulariazation 과의 관계
 
+Regularization 은 Bayesian estimation 과 밀접한 관계가 있어요.
+
+Bayesian 추정은 보통 parameter 의 사후 확률(posterior probability)을 가장 크게 하는 값을 추정량으로 사용하는  _MAP (Maximum a posteriori)_방법으로 수행됩니다.
+
+이를 식으로 나타내면 다음과 같아요.
+
+ $\hat{\beta} = \text{arg} \max_ \beta P(\text{data}\| \beta) P(\beta)$
+
+$=  \text{arg} \min_ \beta \big( -\log P(\text{data}\| \beta) - \log P(\beta) \big)$ ... 식(4)
+
+식(4) 의 앞부분은 음의 log-likelihood, 뒷부분은 penalty term 으로 볼 수 있어요. 
+
+만약 사전 확률(prior probability)이 i.i.d Gaussian 이라면 $\log P(\beta)$ 는 다음과 같죠.
+
+ $\log P(\beta) = \log \big( \prod_{i=1}^{k} \alpha  \exp( -\frac{1}{2\sigma^2} \beta_i \cdot \beta_i)\big)$
+
+$= \log \alpha^k - \frac{1}{2\sigma^2}  \beta^\intercal  \beta$
+
+식(4)의 penalty term 에 위의 사전 확률을 넣으면 다음을 얻을 수 있죠.
+
+$\hat{\beta} =\text{arg} \min_\beta \big( -\log P(\text{data}\| \beta)+ \frac{1}{2\sigma^2} \|\|\beta\|\|_2^2 \big)$ ... 식(5)
+
+위 식은 $L_2$ regularization 과 동일함을 알 수 있어요. 추가적으로 사전 분포가 Laplacian 인 경우에는 $L_1$ regularization 과 동일하다는 것도 확인할 수 있어요.
